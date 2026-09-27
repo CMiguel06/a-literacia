@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-PT">
+  <meta charset="utf-8" /><title>Verificação de A Literacia</title
+  ><style>
+    body {
+      font: 16px system-ui;
+      margin: 24px;
+      background: #fafafa;
+    }
+    li {
+      margin: 8px 0;
+    }
+    .pass {
+      color: #256038;
+    }
+    .fail {
+      color: #a12a2a;
+    }
+    iframe {
+      border: 1px solid #ccc;
+      display: block;
+      background: white;
+    }
+    button {
+      padding: 10px;
+      margin: 8px;
+    }
+    #viewport {
+      overflow: auto;
+      max-width: 100%;
+      border: 1px solid #ddd;
+    }
+  </style>
+  <h1>Verificação de A Literacia</h1>
+  <p id="status">A verificar…</p>
+  <ol id="results"></ol>
+  <div id="controls" hidden>
+    <button data-width="1440">1440 px</button
+    ><button data-width="1024">1024 px</button
+    ><button data-width="768">768 px</button
+    ><button data-width="390">390 px</button
+    ><button data-route="licao.html?id=phishing">Lição</button
+    ><button data-route="index.html">Início</button>
+  </div>
+  <div id="viewport"></div>
+  <script src="browser.js"></script>
+</html>

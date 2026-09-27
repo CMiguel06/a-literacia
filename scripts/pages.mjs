@@ -1,0 +1,54 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = path.resolve(import.meta.dirname, "..");
+const pages = {
+  index: ["home", "Aprender para decidir melhor"],
+  literacia: ["area", "Explorar uma literacia"],
+  licao: ["lesson", "Uma pequena lição para a vida"],
+  missoes: ["missions", "Missões"],
+  progresso: ["progress", "O teu progresso"],
+  conquistas: ["achievements", "As tuas conquistas"],
+  favoritos: ["favorites", "Os teus favoritos"],
+  definicoes: ["settings", "Definições"],
+  desafio: ["challenge", "Desafio final"],
+  404: ["missing", "Página não encontrada"],
+};
+for (const [name, [page, title]] of Object.entries(pages)) {
+  const html = `<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FCFAF6">
+  <title>${title} — A Literacia</title>
+  <meta name="description" content="Aprende competências práticas para a vida: dez literacias, lições curtas, quizzes e desafios. Sem conta, ao teu ritmo.">
+  <meta property="og:title" content="${title} — A Literacia">
+  <meta property="og:description" content="Conhecimento prático para aquilo que realmente acontece na vida. Dez literacias, lições curtas e pequenas missões.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="A Literacia">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="data/literacies.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="${page}">
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+  <aside id="sidebar" aria-label="Menu"></aside>
+  <button id="overlay" aria-label="Fechar menu" tabindex="-1" hidden></button>
+  <div id="shell">
+    <header class="topbar"><button id="menu" class="icon-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar"></button><a id="top-logo" href="index.html"></a><span class="topbar-label">Um pouco mais de conhecimento. Todos os dias que quiseres.</span><div id="status" aria-label="Experiência e nível"></div></header>
+    <div id="storage-warning" role="status" hidden>O navegador não permite guardar os dados. Podes aprender nesta sessão, mas o progresso pode não ficar disponível quando regressares.</div>
+    <main id="main" tabindex="-1"><noscript><div class="noscript"><h1>A Literacia</h1><p>Aprender para decidir melhor.</p><p>Este site usa JavaScript para apresentar as lições, os quizzes e o progresso. Ativa o JavaScript no teu navegador para começar.</p><p>As dez áreas: Financeira, Digital, Alimentar, Científica, Ambiental, Jurídica, Mediática, Cívica, IA e Segurança e Autoproteção.</p></div></noscript></main>
+    <footer><span><strong>A Literacia</strong> &nbsp; Aprender para decidir melhor.</span><a href="definicoes.html">Progresso local · Sem conta</a></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
+`;
+  fs.writeFileSync(path.join(root, name + ".html"), html);
+}
+console.log("10 páginas estáticas geradas.");
