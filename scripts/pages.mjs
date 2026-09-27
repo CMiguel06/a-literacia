@@ -30,6 +30,7 @@ for (const [name, [page, title]] of Object.entries(pages)) {
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/learning.css">
+  ${page === "home" ? '<link rel="stylesheet" href="css/home-v2.css"><script src="js/home-v2.js" defer></script>' : ""}
   <script src="data/literacies.js" defer></script>
   <script src="js/storage.js" defer></script>
   <script src="js/progress.js" defer></script>

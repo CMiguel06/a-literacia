@@ -58,3 +58,7 @@ Mapa de literacias, percursos com cinco estados, identidade temática, fontes em
 Para recriar o conteúdo a partir dos geradores, executa `node scripts/content.mjs` e depois `node scripts/expand-civic.mjs`. Isto substitui edições diretas ao JSON; para essas edições usa apenas `node scripts/sync-data.mjs`.
 
 A expansão e os requisitos de redesign estão em `specifications/redesign/`. Consulta `VALIDATION.md` para os testes.
+
+## Homepage v2 — mundos de conhecimento
+
+A homepage usa composição editorial, hero SVG interativo e progresso integrado. Ver `design/home-v2/README.md` para o [Figma nativo](https://www.figma.com/design/PiJNAacPxKxfxOiHNYcpSt), testes e estado da futura integração Spline. `js/home-v2.js`, `css/home-v2.css` e as fontes locais só são carregados no início. As restantes páginas mantêm a versão anterior.

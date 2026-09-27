@@ -246,7 +246,10 @@
     return `<article class="literacy-card" style="${ui.theme(area.id)}"><div class="card-top"><span class="area-icon tone-${e(area.id)}">${icon(area.icon)}</span><span class="small">${list.length} lições</span></div><h3>${e(area.title)}</h3><p>${e(area.description)}</p>${bar(list)}<a class="explore" href="${areaURL(area)}" aria-label="Explorar ${e(area.title)}">Explorar ${icon("arrow")}</a></article>`;
   }
   function home() {
-    main.innerHTML = ui.homeMarkup();
+    main.innerHTML = window.HomeV2
+      ? HomeV2.render({ data, all, e, lessonURL, areaURL })
+      : ui.homeMarkup();
+    if (window.HomeV2) HomeV2.mount();
     document.querySelector("#search").addEventListener("input", (event) => {
       const query = normalize(event.target.value.trim());
       const grid = document.querySelector("#area-grid"),
@@ -281,7 +284,7 @@
           ].join(" "),
         ).includes(query),
       );
-      status.textContent = `${areas.length} literacias e ${matches.length} lições encontradas.`;
+      status.textContent = `${areas.length} ${areas.length === 1 ? "literacia" : "literacias"} e ${matches.length} ${matches.length === 1 ? "lição encontrada" : "lições encontradas"}.`;
       result.innerHTML =
         (areas.length
           ? `<div class="search-areas">${areas.map((a) => `<a class="search-area" href="${areaURL(a)}" style="${ui.theme(a.id)}"><span class="area-icon">${icon(a.icon)}</span><span><strong>${e(a.title)}</strong><small>Explorar percurso</small></span>${icon("arrow")}</a>`).join("")}</div>`

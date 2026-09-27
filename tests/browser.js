@@ -219,7 +219,8 @@
     });
     ({ d, w } = await load("index.html"));
     assert(
-      w.Progress.xp() === 0 && d.querySelectorAll(".universe").length === 10,
+      w.Progress.xp() === 0 &&
+        d.querySelectorAll(".editorial-world").length === 10,
       "recuperação",
     );
   });
@@ -364,6 +365,64 @@
       "rota",
     );
     assert(p.w.Progress.xp() === 0, "prática sem XP");
+    clear();
+  });
+  await test("Homepage v2: dez objetos acessíveis, seleção e destinos corretos", async () => {
+    clear();
+    const { d, w } = await load("index.html", 1440);
+    const objects = [...d.querySelectorAll(".world-object")];
+    assert(objects.length === 10, "dez objetos");
+    for (const b of objects) {
+      b.focus();
+      b.click();
+      assert(b.getAttribute("aria-pressed") === "true", "selecionado");
+      assert(
+        d.querySelectorAll('.world-object[aria-pressed="true"]').length === 1,
+        "seleção única",
+      );
+      assert(
+        d.querySelector("#world-link").getAttribute("href") ===
+          "literacia.html?id=" + b.dataset.world,
+        "destino",
+      );
+      assert(
+        d.querySelector("#world-description").textContent.length > 20,
+        "descrição",
+      );
+    }
+    assert(
+      d.querySelectorAll(".editorial-world").length === 10,
+      "dez mundos editoriais",
+    );
+    assert(w.Progress.xp() === 0, "exploração não muda XP");
+  });
+  await test("Homepage v2: alvos de toque, imagens, hero e tipografia nos quatro tamanhos", async () => {
+    for (const size of [1440, 1280, 768, 390]) {
+      const { d, w } = await load("index.html", size);
+      await d.fonts.ready;
+      const hero = d.querySelector(".v2-hero");
+      if (size > 768)
+        assert(
+          hero.getBoundingClientRect().height >= w.innerHeight * 0.65,
+          "hero imersivo",
+        );
+      for (const b of d.querySelectorAll(".world-object")) {
+        const r = b.getBoundingClientRect();
+        assert(r.width >= 44 && r.height >= 44, "alvo de toque");
+      }
+      assert(
+        w
+          .getComputedStyle(d.querySelector("h1"))
+          .fontFamily.includes("Fraunces"),
+        "display",
+      );
+      assert(
+        d.querySelector(".book-island").complete &&
+          d.querySelector(".book-island").naturalWidth > 0,
+        "fallback carregado",
+      );
+      assert(d.documentElement.scrollWidth <= size + 1, "sem transbordo");
+    }
     clear();
   });
   await test("Não ocorreram erros JavaScript", async () =>

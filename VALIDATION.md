@@ -16,3 +16,7 @@
 Revisão visual adicional: início desktop, mapa, percurso cívico e missão digital móvel. Fontes primárias visíveis e ligações complementares. A regra CSS de redução de movimento existe; não foi feita auditoria WCAG completa nem teste com leitores de ecrã reais. O conteúdo é educativo; as fontes de princípios não pretendem estabelecer regras universais de etiqueta.
 
 Figma: 13 vistas SVG verificadas como XML válido e tokens fornecidos. São material de importação; não foi possível criar um ficheiro nativo ou protótipo na conta Figma por indisponibilidade das ferramentas.
+
+## Homepage v2
+
+17 grupos passaram, zero falhas. Além dos testes anteriores: dez objetos e destinos no hero, seleção única, alvos mínimos de 44 px, fontes locais, carregamento do SVG e ausência de transbordo a 1440, 1280, 768 e 390 px. Design nativo Figma criado e revisto. Spline aguarda autenticação do utilizador; publicação do fallback SVG expressamente autorizada.
