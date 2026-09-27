@@ -1,15 +1,15 @@
 (function () {
   const themes = {
-    financeira: ["#047857", "#10B981", "#ECFDF5"],
-    digital: ["#1D4ED8", "#3B82F6", "#EFF6FF"],
-    alimentar: ["#C2410C", "#F97316", "#FFF7ED"],
-    cientifica: ["#6D28D9", "#8B5CF6", "#F5F3FF"],
-    ambiental: ["#15803D", "#22C55E", "#F0FDF4"],
-    juridica: ["#9F1239", "#BE185D", "#FFF1F2"],
-    mediatica: ["#854D0E", "#EAB308", "#FEFCE8"],
-    civica: ["#1D4ED8", "#2563EB", "#EFF6FF"],
-    ia: ["#6D28D9", "#7C3AED", "#F5F3FF"],
-    seguranca: ["#B91C1C", "#EF4444", "#FEF2F2"],
+    financeira: ["#047857", "#00A878", "#DCEDE1"],
+    digital: ["#305BA5", "#2979FF", "#E1EAF1"],
+    alimentar: ["#B8512A", "#FF7A45", "#F4E5D9"],
+    cientifica: ["#745397", "#8B5CF6", "#E7E0F2"],
+    ambiental: ["#53732E", "#78A541", "#E2EBCF"],
+    juridica: ["#796300", "#B38C49", "#E8E2D6"],
+    mediatica: ["#A44631", "#E86C60", "#F4DED9"],
+    civica: ["#66568F", "#8C83C8", "#E4E4F2"],
+    ia: ["#513AA8", "#6C4CF1", "#E9E2F1"],
+    seguranca: ["#A44631", "#E84A3C", "#F2E0D9"],
   };
   const theme = (id) => {
     const t = themes[id] || ["#334BA8", "#586CE0", "#EEF2FF"];
