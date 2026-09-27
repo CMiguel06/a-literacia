@@ -61,4 +61,10 @@ A expansão e os requisitos de redesign estão em `specifications/redesign/`. Co
 
 ## Homepage v2 — mundos de conhecimento
 
-A homepage usa composição editorial, hero SVG interativo e progresso integrado. Ver `design/home-v2/README.md` para o [Figma nativo](https://www.figma.com/design/PiJNAacPxKxfxOiHNYcpSt), testes e estado da futura integração Spline. `js/home-v2.js`, `css/home-v2.css` e as fontes locais só são carregados no início. As restantes páginas mantêm a versão anterior.
+A homepage usa composição editorial, hero SVG interativo e progresso integrado. Ver `design/home-v2/README.md` para a primeira versão do [Figma nativo](https://www.figma.com/design/PiJNAacPxKxfxOiHNYcpSt).
+
+## Plataforma modular
+
+As páginas interiores partilham agora as fontes e a identidade editorial. `js/modular.js` e `css/modular.css` acrescentam menu dinâmico com fixação, dez cenários SVG e ligações SVG nos percursos. `js/rive-motion.js` carrega o Rive local apenas após interação relevante; o feedback textual e estático funciona sem o runtime. As animações e os ícones originais estão em `assets/motion/feedback.riv`; a fonte editável está em `design/rive-feedback/`.
+
+Consulta [o estado dos módulos](design/MODULAR-STATUS.md) para o Figma atualizado, reprodução, validação e a dependência Spline ainda pendente de autenticação.

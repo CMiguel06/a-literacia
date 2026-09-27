@@ -31,6 +31,7 @@ for (const [name, [page, title]] of Object.entries(pages)) {
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/learning.css">
   ${page === "home" ? '<link rel="stylesheet" href="css/home-v2.css"><script src="js/home-v2.js" defer></script>' : ""}
+  <link rel="stylesheet" href="css/modular.css">
   <script src="data/literacies.js" defer></script>
   <script src="js/storage.js" defer></script>
   <script src="js/progress.js" defer></script>
@@ -38,6 +39,8 @@ for (const [name, [page, title]] of Object.entries(pages)) {
   <script src="js/learning-ui.js" defer></script>
   <script src="js/experiences.js" defer></script>
   <script src="js/app.js" defer></script>
+  <script src="js/rive-motion.js" defer></script>
+  <script src="js/modular.js" defer></script>
 </head>
 <body data-page="${page}">
   <a class="skip-link" href="#main">Saltar para o conteúdo</a>
@@ -54,6 +57,6 @@ for (const [name, [page, title]] of Object.entries(pages)) {
 </body>
 </html>
 `;
-  fs.writeFileSync(path.join(root, name + ".html"), html);
+  fs.writeFileSync(path.join(root, name + ".html"), html.replace(/[ \t]+$/gm, ""));
 }
 console.log("10 páginas estáticas geradas.");

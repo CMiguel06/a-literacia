@@ -1,0 +1,674 @@
+<Rive version="1" kind="fragment">
+<Artboard id="1:1" name="success" x="0" y="0" width="128" height="128" styleId="1:30" defaultStateMachineId="1:4"><LayoutComponentStyle id="1:30"/>
+<Node id="1:2" x="64" y="64" name="Emblem"><Shape x="10" y="0" rotation="-0.8"><Rectangle width="39" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-9" y="5" rotation="0.75"><Rectangle width="23" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF047857"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="1:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="1:5"/></EntryState><AnimationState x="200" y="0" animationId="1:3" id="1:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="1:3" duration="27" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="1:11" duration="15" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="1:12" duration="15" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="1:13" duration="15" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="1:14" duration="15" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="1:15" duration="15" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="1:16" duration="15" loopValue="oneShot"><KeyedObject objectId="1:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="2:1" name="error" x="180" y="0" width="128" height="128" styleId="2:30" defaultStateMachineId="2:4"><LayoutComponentStyle id="2:30"/>
+<Node id="2:2" x="64" y="64" name="Emblem"><Shape x="0" y="19" rotation="0"><Ellipse width="7" height="7" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="-5" rotation="0"><Rectangle width="7" height="27" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FFA44631"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="2:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="2:5"/></EntryState><AnimationState x="200" y="0" animationId="2:3" id="2:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="2:3" duration="27" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="2:11" duration="15" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="2:12" duration="15" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="2:13" duration="15" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="2:14" duration="15" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="2:15" duration="15" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="2:16" duration="15" loopValue="oneShot"><KeyedObject objectId="2:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="3:1" name="retry" x="360" y="0" width="128" height="128" styleId="3:30" defaultStateMachineId="3:4"><LayoutComponentStyle id="3:30"/>
+<Node id="3:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Star width="46" height="46" points="3" innerRadius=".75" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF8A6500"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="3:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="3:5"/></EntryState><AnimationState x="200" y="0" animationId="3:3" id="3:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="3:3" duration="27" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="3:11" duration="15" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="3:12" duration="15" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="3:13" duration="15" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="3:14" duration="15" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="3:15" duration="15" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="3:16" duration="15" loopValue="oneShot"><KeyedObject objectId="3:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="4:1" name="xp" x="540" y="0" width="128" height="128" styleId="4:30" defaultStateMachineId="4:4"><LayoutComponentStyle id="4:30"/>
+<Node id="4:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Rectangle width="7" height="38" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Rectangle width="38" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF047857"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="4:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="4:5"/></EntryState><AnimationState x="200" y="0" animationId="4:3" id="4:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="4:3" duration="27" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="4:11" duration="15" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="4:12" duration="15" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="4:13" duration="15" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="4:14" duration="15" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="4:15" duration="15" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="4:16" duration="15" loopValue="oneShot"><KeyedObject objectId="4:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="5:1" name="level" x="720" y="0" width="128" height="128" styleId="5:30" defaultStateMachineId="5:4"><LayoutComponentStyle id="5:30"/>
+<Node id="5:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Star width="48" height="48" points="5" innerRadius=".52" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF796300"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="5:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="5:5"/></EntryState><AnimationState x="200" y="0" animationId="5:3" id="5:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="5:3" duration="27" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="5:11" duration="15" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="5:12" duration="15" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="5:13" duration="15" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="5:14" duration="15" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="5:15" duration="15" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="5:16" duration="15" loopValue="oneShot"><KeyedObject objectId="5:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="6:1" name="achievement" x="900" y="0" width="128" height="128" styleId="6:30" defaultStateMachineId="6:4"><LayoutComponentStyle id="6:30"/>
+<Node id="6:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Star width="48" height="48" points="5" innerRadius=".52" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF796300"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="6:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="6:5"/></EntryState><AnimationState x="200" y="0" animationId="6:3" id="6:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="6:3" duration="27" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="6:11" duration="15" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="6:12" duration="15" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="6:13" duration="15" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="6:14" duration="15" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="6:15" duration="15" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="6:16" duration="15" loopValue="oneShot"><KeyedObject objectId="6:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="7:1" name="missionStarted" x="1080" y="0" width="128" height="128" styleId="7:30" defaultStateMachineId="7:4"><LayoutComponentStyle id="7:30"/>
+<Node id="7:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Star width="46" height="46" points="3" innerRadius=".75" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF305BA5"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="7:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="7:5"/></EntryState><AnimationState x="200" y="0" animationId="7:3" id="7:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="7:3" duration="27" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="7:11" duration="15" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="7:12" duration="15" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="7:13" duration="15" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="7:14" duration="15" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="7:15" duration="15" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="7:16" duration="15" loopValue="oneShot"><KeyedObject objectId="7:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="8:1" name="missionCompleted" x="1260" y="0" width="128" height="128" styleId="8:30" defaultStateMachineId="8:4"><LayoutComponentStyle id="8:30"/>
+<Node id="8:2" x="64" y="64" name="Emblem"><Shape x="10" y="0" rotation="-0.8"><Rectangle width="39" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-9" y="5" rotation="0.75"><Rectangle width="23" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF047857"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="8:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="8:5"/></EntryState><AnimationState x="200" y="0" animationId="8:3" id="8:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="8:3" duration="27" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="8:11" duration="15" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="8:12" duration="15" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="8:13" duration="15" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="8:14" duration="15" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="8:15" duration="15" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="8:16" duration="15" loopValue="oneShot"><KeyedObject objectId="8:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="9:1" name="nodeUnlocked" x="1440" y="0" width="128" height="128" styleId="9:30" defaultStateMachineId="9:4"><LayoutComponentStyle id="9:30"/>
+<Node id="9:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Rectangle width="7" height="38" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Rectangle width="38" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF305BA5"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="9:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="9:5"/></EntryState><AnimationState x="200" y="0" animationId="9:3" id="9:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="9:3" duration="27" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="9:11" duration="15" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="9:12" duration="15" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="9:13" duration="15" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="9:14" duration="15" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="9:15" duration="15" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="9:16" duration="15" loopValue="oneShot"><KeyedObject objectId="9:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="10:1" name="nodeCompleted" x="1620" y="0" width="128" height="128" styleId="10:30" defaultStateMachineId="10:4"><LayoutComponentStyle id="10:30"/>
+<Node id="10:2" x="64" y="64" name="Emblem"><Shape x="10" y="0" rotation="-0.8"><Rectangle width="39" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-9" y="5" rotation="0.75"><Rectangle width="23" height="7" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF047857"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="10:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="10:5"/></EntryState><AnimationState x="200" y="0" animationId="10:3" id="10:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="10:3" duration="27" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="10:11" duration="15" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="10:12" duration="15" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="10:13" duration="15" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="10:14" duration="15" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="10:15" duration="15" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="10:16" duration="15" loopValue="oneShot"><KeyedObject objectId="10:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="11:1" name="checkpoint" x="1800" y="0" width="128" height="128" styleId="11:30" defaultStateMachineId="11:4"><LayoutComponentStyle id="11:30"/>
+<Node id="11:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Star width="48" height="48" points="5" innerRadius=".52" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF796300"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="11:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="11:5"/></EntryState><AnimationState x="200" y="0" animationId="11:3" id="11:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="11:3" duration="27" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="11:11" duration="15" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="11:12" duration="15" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="11:13" duration="15" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="11:14" duration="15" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="11:15" duration="15" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="11:16" duration="15" loopValue="oneShot"><KeyedObject objectId="11:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="12:1" name="financeira" x="1980" y="0" width="128" height="128" styleId="12:30" defaultStateMachineId="12:4"><LayoutComponentStyle id="12:30"/>
+<Node id="12:2" x="64" y="64" name="Emblem"><Shape x="16" y="0" rotation="0"><Ellipse width="10" height="10" /><Fill><SolidColor colorValue="FF047857" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Rectangle width="52" height="34" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF047857"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="12:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="12:5"/></EntryState><AnimationState x="200" y="0" animationId="12:3" id="12:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="12:3" duration="27" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="12:11" duration="15" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="12:12" duration="15" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="12:13" duration="15" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="12:14" duration="15" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="12:15" duration="15" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="12:16" duration="15" loopValue="oneShot"><KeyedObject objectId="12:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="13:1" name="digital" x="2160" y="0" width="128" height="128" styleId="13:30" defaultStateMachineId="13:4"><LayoutComponentStyle id="13:30"/>
+<Node id="13:2" x="64" y="64" name="Emblem"><Shape x="0" y="24" rotation="0"><Rectangle width="30" height="5" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="17" rotation="0"><Rectangle width="7" height="14" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="-5" rotation="0"><Rectangle width="52" height="33" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF305BA5"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="13:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="13:5"/></EntryState><AnimationState x="200" y="0" animationId="13:3" id="13:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="13:3" duration="27" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="13:11" duration="15" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="13:12" duration="15" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="13:13" duration="15" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="13:14" duration="15" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="13:15" duration="15" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="13:16" duration="15" loopValue="oneShot"><KeyedObject objectId="13:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="14:1" name="alimentar" x="2340" y="0" width="128" height="128" styleId="14:30" defaultStateMachineId="14:4"><LayoutComponentStyle id="14:30"/>
+<Node id="14:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Ellipse width="25" height="25" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="37" height="37" /><Fill><SolidColor colorValue="FFB8512A" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="55" height="55" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FFB8512A"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="14:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="14:5"/></EntryState><AnimationState x="200" y="0" animationId="14:3" id="14:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="14:3" duration="27" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="14:11" duration="15" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="14:12" duration="15" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="14:13" duration="15" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="14:14" duration="15" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="14:15" duration="15" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="14:16" duration="15" loopValue="oneShot"><KeyedObject objectId="14:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="15:1" name="cientifica" x="2520" y="0" width="128" height="128" styleId="15:30" defaultStateMachineId="15:4"><LayoutComponentStyle id="15:30"/>
+<Node id="15:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Ellipse width="16" height="16" /><Fill><SolidColor colorValue="FF745397" /></Fill></Shape><Shape x="0" y="0" rotation="-0.7"><Ellipse width="57" height="20" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0.7"><Ellipse width="57" height="20" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF745397"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="15:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="15:5"/></EntryState><AnimationState x="200" y="0" animationId="15:3" id="15:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="15:3" duration="27" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="15:11" duration="15" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="15:12" duration="15" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="15:13" duration="15" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="15:14" duration="15" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="15:15" duration="15" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="15:16" duration="15" loopValue="oneShot"><KeyedObject objectId="15:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="16:1" name="ambiental" x="2700" y="0" width="128" height="128" styleId="16:30" defaultStateMachineId="16:4"><LayoutComponentStyle id="16:30"/>
+<Node id="16:2" x="64" y="64" name="Emblem"><Shape x="3" y="9" rotation="-0.2"><Rectangle width="5" height="38" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-8" y="-5" rotation="-0.6"><Ellipse width="28" height="48" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF53732E"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="16:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="16:5"/></EntryState><AnimationState x="200" y="0" animationId="16:3" id="16:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="16:3" duration="27" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="16:11" duration="15" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="16:12" duration="15" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="16:13" duration="15" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="16:14" duration="15" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="16:15" duration="15" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="16:16" duration="15" loopValue="oneShot"><KeyedObject objectId="16:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="17:1" name="juridica" x="2880" y="0" width="128" height="128" styleId="17:30" defaultStateMachineId="17:4"><LayoutComponentStyle id="17:30"/>
+<Node id="17:2" x="64" y="64" name="Emblem"><Shape x="19" y="8" rotation="0"><Triangle width="25" height="18" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-19" y="8" rotation="0"><Triangle width="25" height="18" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="-12" rotation="0"><Rectangle width="52" height="5" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Rectangle width="5" height="52" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF796300"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="17:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="17:5"/></EntryState><AnimationState x="200" y="0" animationId="17:3" id="17:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="17:3" duration="27" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="17:11" duration="15" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="17:12" duration="15" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="17:13" duration="15" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="17:14" duration="15" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="17:15" duration="15" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="17:16" duration="15" loopValue="oneShot"><KeyedObject objectId="17:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="18:1" name="mediatica" x="3060" y="0" width="128" height="128" styleId="18:30" defaultStateMachineId="18:4"><LayoutComponentStyle id="18:30"/>
+<Node id="18:2" x="64" y="64" name="Emblem"><Shape x="0" y="14" rotation="0"><Rectangle width="32" height="4" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFA44631" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Rectangle width="32" height="4" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFA44631" /></Fill></Shape><Shape x="0" y="-14" rotation="0"><Rectangle width="32" height="4" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFA44631" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Rectangle width="48" height="56" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FFA44631"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="18:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="18:5"/></EntryState><AnimationState x="200" y="0" animationId="18:3" id="18:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="18:3" duration="27" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="18:11" duration="15" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="18:12" duration="15" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="18:13" duration="15" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="18:14" duration="15" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="18:15" duration="15" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="18:16" duration="15" loopValue="oneShot"><KeyedObject objectId="18:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="19:1" name="civica" x="3240" y="0" width="128" height="128" styleId="19:30" defaultStateMachineId="19:4"><LayoutComponentStyle id="19:30"/>
+<Node id="19:2" x="64" y="64" name="Emblem"><Shape x="0" y="23" rotation="0"><Rectangle width="57" height="6" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="20" y="3" rotation="0"><Rectangle width="7" height="33" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="3" rotation="0"><Rectangle width="7" height="33" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-20" y="3" rotation="0"><Rectangle width="7" height="33" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="-22" rotation="0"><Triangle width="58" height="24" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF66568F"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="19:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="19:5"/></EntryState><AnimationState x="200" y="0" animationId="19:3" id="19:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="19:3" duration="27" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="19:11" duration="15" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="19:12" duration="15" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="19:13" duration="15" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="19:14" duration="15" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="19:15" duration="15" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="19:16" duration="15" loopValue="oneShot"><KeyedObject objectId="19:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="20:1" name="ia" x="3420" y="0" width="128" height="128" styleId="20:30" defaultStateMachineId="20:4"><LayoutComponentStyle id="20:30"/>
+<Node id="20:2" x="64" y="64" name="Emblem"><Shape x="22" y="22" rotation="0"><Ellipse width="14" height="14" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-22" y="22" rotation="0"><Ellipse width="14" height="14" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="14" height="14" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="22" y="-18" rotation="0"><Ellipse width="14" height="14" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="-22" y="-18" rotation="0"><Ellipse width="14" height="14" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FF6C4CF1"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="20:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="20:5"/></EntryState><AnimationState x="200" y="0" animationId="20:3" id="20:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="20:3" duration="27" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="20:11" duration="15" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="20:12" duration="15" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="20:13" duration="15" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="20:14" duration="15" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="20:15" duration="15" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="20:16" duration="15" loopValue="oneShot"><KeyedObject objectId="20:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+<Artboard id="21:1" name="seguranca" x="3600" y="0" width="128" height="128" styleId="21:30" defaultStateMachineId="21:4"><LayoutComponentStyle id="21:30"/>
+<Node id="21:2" x="64" y="64" name="Emblem"><Shape x="0" y="0" rotation="0"><Rectangle width="6" height="25" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFA44631" /></Fill></Shape><Shape x="0" y="11" rotation="3.14159"><Triangle width="45" height="40" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="-12" rotation="0"><Rectangle width="45" height="30" cornerRadiusTL="3" /><Fill><SolidColor colorValue="FFFFFFFF" /></Fill></Shape><Shape x="0" y="0" rotation="0"><Ellipse width="92" height="92"/><Fill><SolidColor colorValue="FFA44631"/></Fill></Shape></Node>
+<StateMachine name="Feedback" id="21:4"><StateMachineLayer name="Once"><AnyState x="0" y="-140"/><ExitState x="400" y="-140"/><EntryState x="0" y="0"><StateTransition stateToId="21:5"/></EntryState><AnimationState x="200" y="0" animationId="21:3" id="21:5"/></StateMachineLayer></StateMachine>
+<LinearAnimation name="success" id="21:3" duration="27" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="27" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="idle" id="21:11" duration="15" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="hover" id="21:12" duration="15" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="active" id="21:13" duration="15" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="error" id="21:14" duration="15" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="0.94" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="completed" id="21:15" duration="15" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+<LinearAnimation name="locked" id="21:16" duration="15" loopValue="oneShot"><KeyedObject objectId="21:2">
+<KeyedProperty propertyKey="16"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+<KeyedProperty propertyKey="17"><KeyFrameDouble frame="0" value=".85" interpolationType="linear"/><KeyFrameDouble frame="9" value="1" interpolationType="linear"/><KeyFrameDouble frame="15" value="1"/></KeyedProperty>
+</KeyedObject></LinearAnimation>
+</Artboard>
+</Rive>

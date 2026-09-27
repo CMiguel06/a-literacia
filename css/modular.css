@@ -1,0 +1,40 @@
+@import url('home-fonts.css');
+:root{--paper:#f6f4ec;--ink:#183b37;--text:#183b37;--muted:#51655e;--background:#f6f4ec}
+body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.025em}
+#sidebar{background:var(--paper);transition:transform .24s ease}
+.topbar{background:var(--paper)}
+.menu-pin{width:100%;cursor:pointer}.menu-pin b{width:24px;flex:none;font-size:24px}.menu-pin[aria-pressed=true]{background:#dcede1}
+#menu-reveal{position:fixed;left:0;top:45%;width:44px;height:64px;z-index:60;border:1px solid #b9c9b7;border-radius:0 14px 14px 0;background:var(--paper);color:var(--ink);font-size:24px;cursor:pointer}
+@media(min-width:769px){.menu-auto-hidden #sidebar{transform:translateX(-100%)}}
+.area-world{margin:0;position:relative;min-width:220px;max-width:340px;width:35%;text-align:center;isolation:isolate}
+.area-world:before{content:'';position:absolute;inset:24% 0 10%;background:var(--soft);border-radius:58% 42% 47% 53%;transform:rotate(-8deg);z-index:-1}
+.area-world img{display:block;width:100%;height:auto;filter:drop-shadow(0 16px 10px #183b3714);transition:transform .35s ease}
+.area-world:hover img{transform:translateY(-7px) rotate(-2deg)}
+.area-world figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+.path-hero{background:transparent;border:0;padding-inline:0;box-shadow:none}.path-hero h1{font-size:clamp(2.4rem,5vw,4.5rem)}
+.path-summary,.path-mission,.chapter-nav{background:transparent;border-radius:0;border:0;border-top:1px solid #cad4c6;box-shadow:none}
+.chapter-heading{background:transparent;border:0;border-bottom:1px solid #cad4c6;border-radius:0;padding-left:0}
+.path-nodes:before,.path-step:before{display:none}
+.path-nodes{isolation:isolate;padding-bottom:12px}
+.path-connections{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:-1;pointer-events:none}
+.path-connections path{fill:none;stroke:#c2cfbf;stroke-width:4;stroke-linecap:round;stroke-dasharray:4 9}
+.path-connections path.traversed{stroke:var(--accent);stroke-dasharray:none}
+.node-copy{background:#faf9f3;border-color:#d5ddce;box-shadow:none}
+.path-step:nth-of-type(even){margin-left:50px}
+.node-circle{box-shadow:0 7px 0 #183b3709;transition:transform .22s ease}
+.lesson-shell{max-width:780px}.lesson-header h1{font-size:clamp(2rem,4vw,3.4rem)}
+.achievement-card{background:transparent;border:0;border-top:1px solid #cad4c6;border-radius:0;box-shadow:none}
+.achievement{background:transparent;border:0;border-top:1px solid #cad4c6;border-radius:0;box-shadow:none}
+.motion-host{position:relative}.rive-feedback{position:absolute;right:4px;top:0;width:48px;height:48px;pointer-events:none;z-index:3}.dialog-medal .rive-feedback{inset:0;width:100%;height:100%}
+body[data-page=progress] .card-grid{grid-template-columns:1fr}
+body[data-page=progress] .literacy-card{background:transparent;border:0;border-top:1px solid #cad4c6;border-radius:0;box-shadow:none}
+body[data-page=progress] .progress-overview{background:transparent;border:0;border-block:1px solid #cad4c6;border-radius:0;box-shadow:none}
+.discovery-next{margin:64px 0;padding:40px 0;border-block:1px solid #c8d4c3;display:grid;gap:18px}
+.discovery-next h2{font-size:clamp(2rem,4vw,3.3rem);margin:0}.discovery-next p{margin:0;color:var(--muted)}
+.discovery-next a{color:var(--ink);text-underline-offset:5px}.next-mission{font-size:1.2rem;padding-block:12px}
+[data-motion=success]{animation:confirm-step .45s ease-out}[data-motion=error]{animation:retry-step .25s ease-out}
+@keyframes confirm-step{40%{transform:translateY(-4px);filter:brightness(1.12)}100%{transform:none}}
+@keyframes retry-step{30%{transform:translateX(-3px)}65%{transform:translateX(3px)}}
+@media(max-width:768px){.area-world{width:100%;max-width:280px;min-width:0;margin:auto}.path-step:nth-of-type(even){margin-left:0}.menu-pin{display:none}.path-hero{gap:24px}.discovery-next{margin:32px 0;padding:28px 0}}
+@media(prefers-reduced-motion:reduce){#sidebar,.area-world img,.node-circle{transition:none}.area-world:hover img{transform:none}[data-motion]{animation:none}}

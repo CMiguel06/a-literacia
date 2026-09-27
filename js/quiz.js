@@ -32,6 +32,7 @@
         button.setAttribute("aria-pressed", "true");
         if (index === question.correct) {
           button.classList.add("correct");
+          window.ExperienceMotion?.signal("success", button);
           const earned = field ? Store.add(field, id) : false;
           feedback.className = "feedback success";
           feedback.textContent =
@@ -44,6 +45,7 @@
           onSuccess?.();
         } else {
           button.classList.add("incorrect");
+          window.ExperienceMotion?.signal("error", button);
           feedback.className = "feedback retry";
           feedback.textContent =
             "Ainda não. " + question.explanation + " Podes tentar outra vez.";

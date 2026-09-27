@@ -15,7 +15,7 @@
   function assert(condition, message) {
     if (!condition) throw Error(message);
   }
-  async function load(nextRoute = route, nextWidth = width, blocked = false) {
+  async function load(nextRoute = route, nextWidth = width, blocked = false, motionMode = '') {
     route = nextRoute;
     width = nextWidth;
     frame?.remove();
@@ -30,7 +30,8 @@
     // Isolated mock storage: the real visitor's localStorage is never touched.
     const setup = `<base href="${root.href}"><script>Object.defineProperty(window,'localStorage',{value:{getItem(k){${blocked ? "throw Error('blocked')" : "return parent.testMemory[k]??null"}},setItem(k,v){${blocked ? "throw Error('blocked')" : "parent.testMemory[k]=String(v)"}},removeItem(k){delete parent.testMemory[k]},clear(){for(const k of Object.keys(parent.testMemory))delete parent.testMemory[k]}}});const OriginalURLSearchParams=URLSearchParams;window.URLSearchParams=class extends OriginalURLSearchParams{constructor(){super(${JSON.stringify(url.search)})}};window.addEventListener('error',e=>parent.testErrors.push(e.message));<\/script>`;
     const ready = new Promise((resolve) => (frame.onload = resolve));
-    frame.srcdoc = source.replace("<head>", "<head>" + setup);
+    const motionSetup = motionMode === 'reduce' ? `<script>const originalMatchMedia=window.matchMedia.bind(window);window.matchMedia=q=>q.includes('prefers-reduced-motion')?Object.assign(new EventTarget(),{matches:true,media:q}):originalMatchMedia(q);<\/script>` : motionMode === 'fail' ? `<script>const originalFetch=window.fetch.bind(window);window.fetch=(url,...args)=>String(url).includes('feedback.riv')?Promise.resolve(new Response('',{status:404})):originalFetch(url,...args);<\/script>` : '';
+    frame.srcdoc = source.replace("<head>", "<head>" + setup + motionSetup);
     await ready;
     await new Promise((resolve) =>
       requestAnimationFrame(() => requestAnimationFrame(resolve)),
@@ -424,6 +425,54 @@
       assert(d.documentElement.scrollWidth <= size + 1, "sem transbordo");
     }
     clear();
+  });
+  await test("Menu dinâmico: recolher, revelar, fixar e persistir", async () => {
+    clear();
+    let {w,d} = await load('literacia.html?id=financeira',1440);
+    const tick = () => new Promise(resolve => setTimeout(resolve, 80));
+    w.scrollTo(0,500); await tick();
+    assert(d.body.classList.contains('menu-auto-hidden') && d.querySelector('#sidebar').inert, 'ocultar na descida');
+    assert(!d.querySelector('#menu-reveal').hidden, 'revelação acessível');
+    w.scrollTo(0,350); await tick();
+    assert(!d.body.classList.contains('menu-auto-hidden'), 'revelar na subida');
+    d.querySelector('.menu-pin').click();
+    w.scrollTo(0,750); await tick();
+    assert(!d.body.classList.contains('menu-auto-hidden'), 'fixação');
+    ({w,d}=await load('literacia.html?id=financeira',1440));
+    assert(d.querySelector('.menu-pin').getAttribute('aria-pressed')==='true', 'persistência da fixação');
+    clear();
+  });
+  await test("Percursos SVG e cenários nas dez literacias, desktop e mobile", async () => {
+    let {w}=await load(); const areas=w.LITERACIES;
+    for(const area of areas) for(const size of [1440,390]) {
+      const {d}=await load('literacia.html?id='+area.id,size);
+      const picture=d.querySelector('.area-world img');
+      assert(picture.complete && picture.naturalWidth>0,'cenário '+area.id);
+      const lines=d.querySelectorAll('.path-connections path');
+      assert(lines.length===area.categories.reduce((sum,c)=>sum+c.lessons.length-1,0),'ligações '+area.id);
+      for(const line of lines) assert(!line.getAttribute('d').includes('NaN'),'coordenadas SVG');
+      assert(d.querySelector('#sources a'),'fontes preservadas');
+    }
+  });
+  await test("Rive nativo: carregar, reproduzir, limpar e preservar XP", async () => {
+    clear(); const {w,d}=await load('index.html',1440);
+    const target=d.querySelector('#world-caption'), before=w.Progress.xp();
+    assert(await w.NativeMotion.signal('success',target),'carregamento do .riv');
+    assert(target.querySelector('[data-rive-loaded=true]'),'canvas nativo pronto');
+    await new Promise(resolve=>setTimeout(resolve,750));
+    assert(!target.querySelector('canvas'),'limpeza do runtime');
+    for(const kind of ['error','xp','achievement','financeira','seguranca']) assert(await w.NativeMotion.signal(kind,target),'artboard '+kind);
+    assert(w.Progress.xp()===before,'animações sem XP adicional');
+    clear();
+  });
+  await test("Sem Rive ou com movimento reduzido: aprendizagem e feedback preservados", async () => {
+    for(const mode of ['reduce','fail']) {
+      const {w,d}=await load('index.html',1440,false,mode);
+      assert(!(await w.NativeMotion.signal('success',d.querySelector('#world-caption'))),'fallback '+mode);
+      assert(!d.querySelector('canvas.rive-feedback'),'sem canvas órfão');
+      assert(d.querySelectorAll('.world-object').length===10,'dez objetos acessíveis');
+      assert(w.Progress.xp()===0,'XP intacto');
+    }
   });
   await test("Não ocorreram erros JavaScript", async () =>
     assert(errors.length === 0, errors.join("; ")));
