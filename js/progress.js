@@ -21,7 +21,7 @@
       validCount("quizzes", ids) * 10 +
       validCount(
         "missions",
-        LITERACIES.map((a) => a.mission.id),
+        LITERACIES.flatMap((a) => (a.missions || [a.mission]).map((m) => m.id)),
       ) *
         25 +
       validCount(
@@ -90,9 +90,47 @@
       {
         title: "Aprender para a Vida",
         description: "Conclui as 40 lições iniciais.",
-        unlocked: count() === lessons().length,
+        unlocked: count(lessons().filter((l) => l.introducedIn !== 2)) === 40,
+      },
+      {
+        title: "Viver em Comum",
+        description: "Conclui as 24 lições da Literacia Cívica.",
+        unlocked:
+          count(
+            LITERACIES.find((a) => a.id === "civica").categories.flatMap(
+              (c) => c.lessons,
+            ),
+          ) === 24,
+      },
+      {
+        title: "Conhecimento em Dia",
+        description: "Revê uma lição concluída e acerta novamente no quiz.",
+        unlocked: Store.state.masteredLessons.length > 0,
       },
     ];
   }
-  window.Progress = { xp, level, count, percent, achievements, lessons };
+  function state(id) {
+    if (Store.state.completedLessons.includes(id))
+      return Store.state.masteredLessons.includes(id)
+        ? "mastered"
+        : "completed";
+    return Store.state.startedLessons.includes(id) ? "active" : "available";
+  }
+  const stateLabels = {
+    locked: "Bloqueado",
+    available: "Disponível",
+    active: "Em progresso",
+    completed: "Concluído",
+    mastered: "Dominado",
+  };
+  window.Progress = {
+    xp,
+    level,
+    count,
+    percent,
+    achievements,
+    lessons,
+    state,
+    stateLabels,
+  };
 })();

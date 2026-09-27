@@ -1,13 +1,16 @@
 (function () {
   const key = "a-literacia-progress";
   const empty = () => ({
-    version: 1,
+    version: 2,
     completedLessons: [],
     quizzes: [],
     missions: [],
     challenges: [],
     favorites: [],
     lastLesson: null,
+    startedLessons: [],
+    masteredLessons: [],
+    achievementDates: {},
   });
   let available = true;
   function read() {
@@ -21,6 +24,8 @@
         "missions",
         "challenges",
         "favorites",
+        "startedLessons",
+        "masteredLessons",
       ]) {
         clean[field] = Array.isArray(raw[field])
           ? [...new Set(raw[field].filter((v) => typeof v === "string"))]
@@ -28,6 +33,13 @@
       }
       clean.lastLesson =
         typeof raw.lastLesson === "string" ? raw.lastLesson : null;
+      if (clean.lastLesson && !clean.startedLessons.includes(clean.lastLesson))
+        clean.startedLessons.push(clean.lastLesson);
+      if (raw.achievementDates && typeof raw.achievementDates === "object") {
+        for (const [name, date] of Object.entries(raw.achievementDates))
+          if (Number.isFinite(date) && date >= 0)
+            clean.achievementDates[name] = date;
+      }
       return clean;
     } catch {
       return empty();
@@ -81,7 +93,23 @@
     },
     last(id) {
       state.lastLesson = id;
+      if (!state.startedLessons.includes(id)) state.startedLessons.push(id);
       write();
+    },
+    recognize(titles, initial = false) {
+      const fresh = titles.filter(
+        (title) =>
+          !Object.prototype.hasOwnProperty.call(state.achievementDates, title),
+      );
+      if (!fresh.length) return [];
+      for (const title of fresh)
+        state.achievementDates[title] = initial ? 0 : Date.now();
+      try {
+        localStorage.setItem(key, JSON.stringify(state));
+      } catch {
+        available = false;
+      }
+      return fresh;
     },
     reset() {
       state = empty();

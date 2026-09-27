@@ -55,7 +55,7 @@
   function clear() {
     for (const key of Object.keys(memory)) delete memory[key];
   }
-  await test("10 literacias, 40 lições, IDs e perguntas válidos", async () => {
+  await test("10 literacias, 60 lições, IDs e perguntas válidos", async () => {
     const { w } = await load();
     const data = w.LITERACIES,
       ids = [];
@@ -74,7 +74,7 @@
         }
       }
     }
-    assert(ids.length === 40 && new Set(ids).size === 40, "IDs únicos");
+    assert(ids.length === 60 && new Set(ids).size === 60, "IDs únicos");
   });
   await test("Pesquisa por aliases e sem acentos; pesquisa vazia e sem resultados", async () => {
     const { d, w } = await load();
@@ -132,7 +132,7 @@
     ({ d, w } = await load("index.html"));
     assert(
       d
-        .querySelector(".journey-strip a")
+        .querySelector(".resume-card a")
         .getAttribute("href")
         .includes("phishing"),
       "última lição",
@@ -166,7 +166,7 @@
     d.querySelectorAll("#final-quiz button")[2].click();
     assert(w.Progress.xp() === 195, "desafio único");
   });
-  await test("Todas as 40 lições abrem e os 60 quizzes/missões/desafios funcionam", async () => {
+  await test("Todas as 60 lições, 14 missões e 10 desafios funcionam", async () => {
     clear();
     let { w } = await load();
     const data = w.LITERACIES;
@@ -185,14 +185,19 @@
         );
       }
       let { d, w } = await load("missoes.html?id=" + area.id);
-      d.querySelectorAll("#" + area.mission.id + " button")[
-        area.mission.correct
-      ].click();
+      for (const mission of area.missions || [area.mission])
+        d.querySelectorAll("#" + mission.id + " button")[
+          mission.correct
+        ].click();
       ({ d, w } = await load("desafio.html?id=" + area.id));
       d.querySelectorAll("#final-quiz button")[area.challenge.correct].click();
     }
+    {
+      const review = await load("licao.html?id=receitas-e-despesas");
+      review.d.querySelectorAll("#lesson-quiz button")[0].click();
+    }
     ({ w } = await load("progresso.html"));
-    assert(w.Progress.xp() === 1950, "total de XP");
+    assert(w.Progress.xp() === 2650, "total de XP");
     assert(w.Progress.percent() === 100, "100%");
     assert(
       w.Progress.achievements().every((a) => a.unlocked),
@@ -214,8 +219,7 @@
     });
     ({ d, w } = await load("index.html"));
     assert(
-      w.Progress.xp() === 0 &&
-        d.querySelectorAll(".literacy-card").length === 10,
+      w.Progress.xp() === 0 && d.querySelectorAll(".universe").length === 10,
       "recuperação",
     );
   });
@@ -240,14 +244,20 @@
     assert(!d.body.classList.contains("drawer-open"), "Escape");
     assert(d.activeElement === d.querySelector("#menu"), "foco devolvido");
   });
-  await test("Layout sem transbordo a 1440, 1024, 768 e 390 px nas páginas principais", async () => {
+  await test("Layout sem transbordo a 1440, 1280, 1024, 768, 430 e 390 px nas páginas principais", async () => {
     clear();
-    for (const size of [1440, 1024, 768, 390])
+    for (const size of [1440, 1280, 1024, 768, 430, 390])
       for (const path of [
         "index.html",
         "literacia.html?id=seguranca",
         "licao.html?id=phishing",
         "missoes.html",
+        "missoes.html?id=financeira",
+        "missoes.html?id=alimentar",
+        "missoes.html?id=digital",
+        "missoes.html?id=mediatica",
+        "missoes.html?id=seguranca",
+        "literacia.html?id=civica",
         "progresso.html",
         "conquistas.html",
         "favoritos.html",
@@ -267,6 +277,94 @@
           "links com nome",
         );
       }
+  });
+  await test("Migração preserva os 1950 XP, favoritos e conquistas anteriores", async () => {
+    clear();
+    let { w } = await load();
+    const data = w.LITERACIES;
+    const old = data
+      .flatMap((a) => a.categories.flatMap((c) => c.lessons))
+      .filter((l) => l.introducedIn !== 2)
+      .map((l) => l.id);
+    memory["a-literacia-progress"] = JSON.stringify({
+      version: 1,
+      completedLessons: old,
+      quizzes: old,
+      missions: data.map((a) => a.mission.id),
+      challenges: data.map((a) => a.challenge.id),
+      favorites: ["phishing"],
+      lastLesson: "phishing",
+    });
+    let page = await load("desafio.html?id=civica");
+    assert(page.w.Progress.xp() === 1950, "XP anterior");
+    assert(page.d.querySelector("#final-quiz"), "desafio anterior preservado");
+    assert(
+      page.w.Store.state.favorites.includes("phishing"),
+      "favorito anterior",
+    );
+    assert(
+      page.w.Progress.achievements().find(
+        (a) => a.title === "Aprender para a Vida",
+      ).unlocked,
+      "medalha anterior",
+    );
+  });
+  await test("Estados disponível, em progresso, concluído e dominado sem XP duplicado", async () => {
+    clear();
+    let { w } = await load();
+    assert(w.Progress.state("phishing") === "available", "disponível");
+    let p = await load("licao.html?id=phishing");
+    assert(p.w.Progress.state("phishing") === "active", "ativo");
+    p.d.querySelectorAll("#lesson-quiz button")[1].click();
+    p.d.querySelector("#complete").click();
+    assert(p.w.Progress.state("phishing") === "completed", "concluído");
+    p = await load("licao.html?id=phishing");
+    p.d.querySelectorAll("#lesson-quiz button")[1].click();
+    assert(
+      p.w.Progress.state("phishing") === "mastered" && p.w.Progress.xp() === 30,
+      "dominado",
+    );
+  });
+  await test("Cinco experiências funcionam por botões e não atribuem XP", async () => {
+    clear();
+    let p = await load("missoes.html?id=financeira");
+    for (let i = 0; i < 4; i++)
+      p.d.querySelector('[data-change="0,10"]').click();
+    for (let i = 0; i < 6; i++)
+      p.d.querySelector('[data-change="1,10"]').click();
+    p.d.querySelector(".lab-check").click();
+    assert(
+      p.d.querySelector(".lab-feedback").textContent.includes("✓"),
+      "orçamento",
+    );
+    assert(p.d.querySelector('[data-change="0,10"]').disabled, "limite 100");
+    p = await load("missoes.html?id=alimentar");
+    p.d.querySelectorAll("[data-food]").forEach((b) => b.click());
+    p.d.querySelector(".lab-check").click();
+    assert(
+      p.d.querySelector("#plate-count").textContent === "3 de 3 grupos",
+      "prato",
+    );
+    p = await load("missoes.html?id=digital");
+    p.d.querySelectorAll("[data-mark]").forEach((b) => b.click());
+    assert(
+      p.d.querySelector("#signal-count").textContent.startsWith("3 de 3"),
+      "sinais",
+    );
+    p = await load("missoes.html?id=mediatica");
+    p.d.querySelectorAll("[data-news]").forEach((b) => b.click());
+    assert(
+      p.d.querySelector("#news-count").textContent.startsWith("4 de 4"),
+      "notícia",
+    );
+    p = await load("missoes.html?id=seguranca");
+    p.d.querySelector('[data-route="a"]').click();
+    assert(
+      p.d.querySelector(".lab-feedback").textContent.includes("✓"),
+      "rota",
+    );
+    assert(p.w.Progress.xp() === 0, "prática sem XP");
+    clear();
   });
   await test("Não ocorreram erros JavaScript", async () =>
     assert(errors.length === 0, errors.join("; ")));

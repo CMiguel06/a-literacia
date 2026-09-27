@@ -6,9 +6,9 @@ Site: https://CMiguel06.github.io/a-literacia/
 
 ## O que inclui
 
-- 10 literacias, 2 categorias por literacia e 2 lições por categoria (40 lições).
+- 10 literacias e 60 lições; Cívica expandida para 12 categorias e 24 lições.
 - Explicações, exemplos, prática, quiz e atividade em cada lição.
-- 10 missões e 10 desafios finais (desbloqueados ao concluir as lições da área).
+- 14 missões, cinco experiências visuais interativas e 10 desafios finais (desbloqueados ao concluir as lições da área).
 - XP atribuído uma única vez por atividade: lição 20, quiz 10, missão 25, desafio 50.
 - Níveis, conquistas, pesquisa com acentos normalizados e aliases, favoritos e última lição.
 - Menu recolhível no computador e drawer com teclado e foco no telemóvel.
@@ -22,7 +22,10 @@ No GitHub: **Settings → Pages → Deploy from a branch → main → / (root)**
 
 ## Estrutura e manutenção
 
-- `css/styles.css`: identidade visual e responsividade.
+- `css/styles.css` e `css/learning.css`: estilos base, nova identidade e responsividade.
+- `js/learning-ui.js`: mapa, percursos, emblemas e fontes.
+- `js/experiences.js`: cinco laboratórios acessíveis por botões e arrastar.
+- `design/`: tokens, 13 vistas SVG importáveis e guia Figma.
 - `js/app.js`: interface, páginas, pesquisa, menu e navegação.
 - `js/storage.js`: persistência e recuperação de dados inválidos.
 - `js/progress.js`: XP, níveis e conquistas.
@@ -36,9 +39,9 @@ No GitHub: **Settings → Pages → Deploy from a branch → main → / (root)**
 
 Para adicionar conteúdo, edita o JSON e executa `node scripts/sync-data.mjs`. Não voltes a executar `content.mjs` depois de edições diretas ao JSON: esse script recria o conteúdo inicial. Para manter uma única fonte editorial, podes optar por editar o gerador em vez do JSON.
 
-Cada literacia contém `categories[].lessons[]`, `mission`, `challenge` e `sources`. IDs devem ser únicos. As perguntas têm `answers`, `correct` (índice começando em zero) e `explanation`. Não mudes IDs de lições publicadas sem considerar o progresso existente.
+Cada literacia contém `categories[].lessons[]`, `mission`, `missions[]`, `challenge` e `sources`. IDs devem ser únicos. As perguntas têm `answers`, `correct` (índice começando em zero) e `explanation`. Não mudes IDs de lições publicadas sem considerar o progresso existente.
 
-O perfil de explicação é guardado, mas a adaptação por idade está preparada apenas na estrutura `variants`, conforme a especificação permite para o MVP. O mapa de conteúdos completo encontra-se nos Markdown; a primeira versão implementa o âmbito inicial de 40 lições, não centenas de temas.
+O perfil de explicação é guardado, mas a adaptação por idade está preparada apenas na estrutura `variants`, conforme a especificação permite para o MVP. O mapa de conteúdos completo encontra-se nos Markdown; esta versão inclui 60 lições e a expansão cívica do segundo ZIP.
 
 Os exemplos são educativos, não aconselhamento financeiro, médico ou jurídico individual. A área cívica mantém neutralidade partidária; a segurança privilegia prevenção, afastamento e ajuda. Fontes oficiais estão disponíveis em cada literacia e lição.
 
@@ -47,3 +50,11 @@ Os exemplos são educativos, não aconselhamento financeiro, médico ou jurídic
 Limpar o armazenamento do navegador remove o progresso. Navegação privada ou bloqueio do armazenamento pode impedir persistência. O site continua a funcionar em memória nessa sessão e avisa quando uma gravação falha. O alojamento pode manter registos de acesso conforme a política do GitHub.
 
 Não há serviços pagos, bibliotecas remotas, fontes externas ou build necessário para publicar. Node.js é apenas uma ferramenta opcional para manutenção dos dados e geração das páginas.
+
+## Atualização visual de setembro de 2026
+
+Mapa de literacias, percursos com cinco estados, identidade temática, fontes em destaque, microinterações e redução de movimento. A chave de armazenamento e todos os IDs anteriores foram preservados. O máximo atual é 2650 XP; dominar uma lição por revisão não duplica XP. A conquista das 40 lições originais mantém-se.
+
+Para recriar o conteúdo a partir dos geradores, executa `node scripts/content.mjs` e depois `node scripts/expand-civic.mjs`. Isto substitui edições diretas ao JSON; para essas edições usa apenas `node scripts/sync-data.mjs`.
+
+A expansão e os requisitos de redesign estão em `specifications/redesign/`. Consulta `VALIDATION.md` para os testes.

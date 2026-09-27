@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#FCFAF6" />
+    <meta name="theme-color" content="#F7F9FC" />
     <title>Uma pequena lição para a vida — A Literacia</title>
     <meta
       name="description"
@@ -22,10 +22,13 @@
     <meta property="og:site_name" content="A Literacia" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/learning.css" />
     <script src="data/literacies.js" defer></script>
     <script src="js/storage.js" defer></script>
     <script src="js/progress.js" defer></script>
     <script src="js/quiz.js" defer></script>
+    <script src="js/learning-ui.js" defer></script>
+    <script src="js/experiences.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body data-page="lesson">
@@ -42,9 +45,7 @@
           aria-controls="sidebar"
         ></button
         ><a id="top-logo" href="index.html"></a
-        ><span class="topbar-label"
-          >Um pouco mais de conhecimento. Todos os dias que quiseres.</span
-        >
+        ><span class="topbar-label">O teu espaço de aprendizagem</span>
         <div id="status" aria-label="Experiência e nível"></div>
       </header>
       <div id="storage-warning" role="status" hidden>
@@ -75,6 +76,16 @@
         ><a href="definicoes.html">Progresso local · Sem conta</a>
       </footer>
     </div>
+    <dialog id="achievement-dialog" aria-labelledby="achievement-title">
+      <span class="dialog-medal" aria-hidden="true">★</span>
+      <p class="eyebrow">MAIS UM PASSO NO TEU CAMINHO</p>
+      <h2 id="achievement-title">Uma nova conquista!</h2>
+      <p id="achievement-name"></p>
+      <p>O conhecimento que ganhaste vai contigo.</p>
+      <button id="achievement-close" class="button primary">
+        Continuar a aprender
+      </button>
+    </dialog>
     <div id="toast" role="status" aria-live="polite" hidden></div>
   </body>
 </html>

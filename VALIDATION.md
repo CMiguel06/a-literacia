@@ -1,32 +1,18 @@
-# Verificação da primeira versão
+# Verificação — 27 de setembro de 2026
 
-Verificada em 27 de setembro de 2026 no navegador Chromium integrado.
+15 grupos de verificações passaram, zero falhas, no navegador integrado Chromium. Executar `python -m http.server 8091` e abrir `tests/browser.html`. O armazenamento dos testes é isolado do progresso real.
 
-## Testes funcionais
+- 60 lições únicas com conteúdo e quizzes válidos; 14 missões e 10 desafios executados.
+- Quizzes incorretos sem XP; acerto, conclusão, missão e desafio sem duplicação. Máximo 2650 XP.
+- Migração de estado v1: 1950 XP, favoritos, medalha original e desafio cívico anterior preservados.
+- Estados disponível, em progresso, concluído e dominado; revisão sem XP adicional.
+- Pesquisa por aliases e sem acentos; estados vazios; favoritos, última lição, menu e perfil persistentes.
+- Dados inválidos e armazenamento bloqueado recuperáveis; reposição com confirmação.
+- Menu móvel com Escape, foco devolvido e fundo inerte.
+- Sem transbordo horizontal nas páginas principais, percurso cívico e cinco laboratórios a 1440, 1280, 1024, 768, 430 e 390 px.
+- Cinco experiências operáveis por botões; limite de 100 euros, seleção dos grupos, sinais, elementos da notícia e rota segura.
+- Nenhum erro JavaScript capturado durante os testes.
 
-As 12 verificações agrupadas em `tests/browser.html` passaram, sem erros JavaScript. O teste usa armazenamento simulado isolado e não apaga o progresso de visitantes.
+Revisão visual adicional: início desktop, mapa, percurso cívico e missão digital móvel. Fontes primárias visíveis e ligações complementares. A regra CSS de redução de movimento existe; não foi feita auditoria WCAG completa nem teste com leitores de ecrã reais. O conteúdo é educativo; as fontes de princípios não pretendem estabelecer regras universais de etiqueta.
 
-- 10 literacias, 20 categorias, 40 lições e IDs únicos.
-- Pesquisa por título, descrição, palavras-chave e aliases, incluindo normalização de acentos e estados vazios.
-- Resposta incorreta sem XP; resposta correta com 10 XP; conclusão com 20 XP; repetição sem duplicação.
-- Favoritos, última lição, preferência de menu e perfil preservados entre carregamentos.
-- Missões com 25 XP e desafios com 50 XP, atribuídos uma única vez; acesso ao desafio condicionado à conclusão das lições da área.
-- Abertura e conclusão das 40 lições, das 10 missões e dos 10 desafios; total de 1950 XP e 100% de progresso.
-- Recuperação de dados locais corrompidos e de IDs de rota inexistentes.
-- Aprendizagem em memória quando o navegador bloqueia o armazenamento, com aviso visível.
-- Menu móvel com Escape, foco devolvido ao botão e conteúdo de fundo isolado.
-- Ausência de transbordo horizontal nas páginas principais a **1440, 1024, 768 e 390 px**.
-- Ausência de erros JavaScript durante as verificações.
-- Reposição com confirmação e cancelamento.
-
-Revisão visual da página inicial em computador e telemóvel de 390 px. JavaScript validado também com `node --check`.
-
-## Repetir
-
-Executa `python -m http.server 8091` na pasta do projeto e abre `http://127.0.0.1:8091/tests/browser.html`.
-
-Os testes são executados num iframe do próprio site. Usam dados em memória, sem alterações ao localStorage real do utilizador. Não requerem dependências ou serviços externos.
-
-## Âmbito
-
-O conteúdo corresponde ao MVP pedido: duas categorias e duas lições por categoria. Os restantes temas do mapa editorial original são possibilidades de expansão. As variantes por idade estão preparadas no modelo, mas ainda não têm texto diferenciado. A revisão é funcional e visual; não constitui uma auditoria formal de acessibilidade nem aconselhamento profissional.
+Figma: 13 vistas SVG verificadas como XML válido e tokens fornecidos. São material de importação; não foi possível criar um ficheiro nativo ou protótipo na conta Figma por indisponibilidade das ferramentas.

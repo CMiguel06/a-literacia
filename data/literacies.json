@@ -58,7 +58,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Todos Contam — rendimentos e despesas",
+                "url": "https://www.todoscontam.pt/pt-pt/node/443"
+              },
+              {
+                "title": "Referencial de Educação Financeira",
+                "url": "https://www.todoscontam.pt/sites/default/files/SiteCollectionDocuments/ReferencialEducacaoFinanceira.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "necessidade-vs-desejo",
@@ -106,7 +118,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Todos Contam — rendimentos e despesas",
+                "url": "https://www.todoscontam.pt/pt-pt/node/443"
+              },
+              {
+                "title": "Referencial de Educação Financeira",
+                "url": "https://www.todoscontam.pt/sites/default/files/SiteCollectionDocuments/ReferencialEducacaoFinanceira.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -162,7 +186,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Todos Contam — rendimentos e despesas",
+                "url": "https://www.todoscontam.pt/pt-pt/node/443"
+              },
+              {
+                "title": "Referencial de Educação Financeira",
+                "url": "https://www.todoscontam.pt/sites/default/files/SiteCollectionDocuments/ReferencialEducacaoFinanceira.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "poupanca-e-objetivos",
@@ -210,7 +246,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Todos Contam — rendimentos e despesas",
+                "url": "https://www.todoscontam.pt/pt-pt/node/443"
+              },
+              {
+                "title": "Referencial de Educação Financeira",
+                "url": "https://www.todoscontam.pt/sites/default/files/SiteCollectionDocuments/ReferencialEducacaoFinanceira.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -247,6 +295,20 @@
       {
         "title": "Referencial de Educação Financeira",
         "url": "https://www.todoscontam.pt/sites/default/files/SiteCollectionDocuments/ReferencialEducacaoFinanceira.pdf"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-financeira",
+        "title": "Tens 50 €. Como divides?",
+        "question": "Tens 50 € e precisas de 30 € para um compromisso. Qual plano respeita o disponível?",
+        "answers": [
+          "30 € para o compromisso, 10 € para gastar e 10 € guardados",
+          "40 € para lazer e 30 € para o compromisso",
+          "Gastar 60 € sem rever o plano"
+        ],
+        "correct": 0,
+        "explanation": "O primeiro plano soma 50 € e inclui o compromisso."
       }
     ]
   },
@@ -309,7 +371,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "CNCS — boas práticas",
+                "url": "https://dyn.cncs.gov.pt/pt/boaspraticas"
+              },
+              {
+                "title": "CNCS — autenticação multifator",
+                "url": "https://www.cncs.gov.pt/docs/guia-mfa.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "passwords-e-mfa",
@@ -361,7 +435,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "CNCS — boas práticas",
+                "url": "https://dyn.cncs.gov.pt/pt/boaspraticas"
+              },
+              {
+                "title": "CNCS — autenticação multifator",
+                "url": "https://www.cncs.gov.pt/docs/guia-mfa.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -417,7 +503,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "CNCS — boas práticas",
+                "url": "https://dyn.cncs.gov.pt/pt/boaspraticas"
+              },
+              {
+                "title": "CNCS — autenticação multifator",
+                "url": "https://www.cncs.gov.pt/docs/guia-mfa.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "backups",
@@ -467,7 +565,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "CNCS — boas práticas",
+                "url": "https://dyn.cncs.gov.pt/pt/boaspraticas"
+              },
+              {
+                "title": "CNCS — autenticação multifator",
+                "url": "https://www.cncs.gov.pt/docs/guia-mfa.pdf"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -504,6 +614,20 @@
       {
         "title": "CNCS — autenticação multifator",
         "url": "https://www.cncs.gov.pt/docs/guia-mfa.pdf"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-digital",
+        "title": "Esta mensagem é phishing?",
+        "question": "Recebes uma SMS com urgência e um pedido de código. O que fazes?",
+        "answers": [
+          "Partilho o código",
+          "Confirmo através do canal oficial, sem seguir o link",
+          "Respondo com a palavra-passe"
+        ],
+        "correct": 1,
+        "explanation": "A confirmação independente evita seguir um pedido suspeito."
       }
     ]
   },
@@ -564,7 +688,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "DGS — Roda dos Alimentos",
+                "url": "https://alimentacaosaudavel.dgs.pt/roda-dos-alimentos/"
+              },
+              {
+                "title": "União Europeia — rotulagem alimentar",
+                "url": "https://europa.eu/youreurope/business/product-rules-compliance/food/labelling-rules/index_pt.htm"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "agua",
@@ -610,7 +746,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "DGS — Roda dos Alimentos",
+                "url": "https://alimentacaosaudavel.dgs.pt/roda-dos-alimentos/"
+              },
+              {
+                "title": "União Europeia — rotulagem alimentar",
+                "url": "https://europa.eu/youreurope/business/product-rules-compliance/food/labelling-rules/index_pt.htm"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -668,7 +816,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "DGS — Roda dos Alimentos",
+                "url": "https://alimentacaosaudavel.dgs.pt/roda-dos-alimentos/"
+              },
+              {
+                "title": "União Europeia — rotulagem alimentar",
+                "url": "https://europa.eu/youreurope/business/product-rules-compliance/food/labelling-rules/index_pt.htm"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "ingredientes",
@@ -716,7 +876,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "DGS — Roda dos Alimentos",
+                "url": "https://alimentacaosaudavel.dgs.pt/roda-dos-alimentos/"
+              },
+              {
+                "title": "União Europeia — rotulagem alimentar",
+                "url": "https://europa.eu/youreurope/business/product-rules-compliance/food/labelling-rules/index_pt.htm"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -753,6 +925,20 @@
       {
         "title": "União Europeia — rotulagem alimentar",
         "url": "https://europa.eu/youreurope/business/product-rules-compliance/food/labelling-rules/index_pt.htm"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-alimentar",
+        "title": "Constrói uma refeição variada",
+        "question": "Qual proposta combina grupos diferentes?",
+        "answers": [
+          "Só arroz",
+          "Só fruta",
+          "Arroz, feijão, hortícolas e água"
+        ],
+        "correct": 2,
+        "explanation": "A combinação inclui vários grupos alimentares."
       }
     ]
   },
@@ -813,7 +999,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Understanding Science — Universidade da Califórnia",
+                "url": "https://undsci.berkeley.edu/understanding-science-101/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "experiencia",
@@ -861,7 +1055,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Understanding Science — Universidade da Califórnia",
+                "url": "https://undsci.berkeley.edu/understanding-science-101/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -915,7 +1117,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Understanding Science — Universidade da Califórnia",
+                "url": "https://undsci.berkeley.edu/understanding-science-101/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "amostras",
@@ -963,7 +1173,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Understanding Science — Universidade da Califórnia",
+                "url": "https://undsci.berkeley.edu/understanding-science-101/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -996,6 +1214,20 @@
       {
         "title": "Understanding Science — Universidade da Califórnia",
         "url": "https://undsci.berkeley.edu/understanding-science-101/"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-cientifica",
+        "title": "O que conta como evidência?",
+        "question": "Uma afirmação sobre plantas fica mais sustentada por…",
+        "answers": [
+          "medições de uma comparação controlada",
+          "um palpite sem teste",
+          "a popularidade da frase"
+        ],
+        "correct": 0,
+        "explanation": "Medições e condições descritas permitem avaliar a afirmação."
       }
     ]
   },
@@ -1056,7 +1288,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Agência Portuguesa do Ambiente — resíduos",
+                "url": "https://apambiente.pt/residuos"
+              },
+              {
+                "title": "IPMA — clima",
+                "url": "https://www.ipma.pt/pt/oclima/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "desperdicio",
@@ -1104,7 +1348,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Agência Portuguesa do Ambiente — resíduos",
+                "url": "https://apambiente.pt/residuos"
+              },
+              {
+                "title": "IPMA — clima",
+                "url": "https://www.ipma.pt/pt/oclima/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -1158,7 +1414,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Agência Portuguesa do Ambiente — resíduos",
+                "url": "https://apambiente.pt/residuos"
+              },
+              {
+                "title": "IPMA — clima",
+                "url": "https://www.ipma.pt/pt/oclima/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "ciclo-de-vida",
@@ -1210,7 +1478,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Agência Portuguesa do Ambiente — resíduos",
+                "url": "https://apambiente.pt/residuos"
+              },
+              {
+                "title": "IPMA — clima",
+                "url": "https://www.ipma.pt/pt/oclima/"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -1247,6 +1527,20 @@
       {
         "title": "IPMA — clima",
         "url": "https://www.ipma.pt/pt/oclima/"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-ambiental",
+        "title": "Menos desperdício",
+        "question": "Tens um objeto ainda utilizável. Qual ação pode prolongar a sua vida?",
+        "answers": [
+          "Deitar fora só porque é antigo",
+          "Reparar ou reutilizar quando adequado",
+          "Comprar dois substitutos"
+        ],
+        "correct": 1,
+        "explanation": "Prolongar o uso pode evitar resíduos e novo consumo."
       }
     ]
   },
@@ -1309,7 +1603,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Your Europe — informação contratual",
+                "url": "https://europa.eu/youreurope/citizens/consumers/shopping/contract-information/index_pt.htm"
+              },
+              {
+                "title": "gov.pt — conflitos de consumo",
+                "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "direitos-e-deveres",
@@ -1359,7 +1665,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Your Europe — informação contratual",
+                "url": "https://europa.eu/youreurope/citizens/consumers/shopping/contract-information/index_pt.htm"
+              },
+              {
+                "title": "gov.pt — conflitos de consumo",
+                "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -1415,7 +1733,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Your Europe — informação contratual",
+                "url": "https://europa.eu/youreurope/citizens/consumers/shopping/contract-information/index_pt.htm"
+              },
+              {
+                "title": "gov.pt — conflitos de consumo",
+                "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "reclamacao",
@@ -1463,7 +1793,19 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Your Europe — informação contratual",
+                "url": "https://europa.eu/youreurope/citizens/consumers/shopping/contract-information/index_pt.htm"
+              },
+              {
+                "title": "gov.pt — conflitos de consumo",
+                "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -1500,6 +1842,20 @@
       {
         "title": "gov.pt — conflitos de consumo",
         "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-juridica",
+        "title": "Antes de subscrever",
+        "question": "Uma subscrição anuncia preço baixo. O que verificas?",
+        "answers": [
+          "Só o anúncio",
+          "Só o nome da empresa",
+          "Preço total, duração e cancelamento"
+        ],
+        "correct": 2,
+        "explanation": "São elementos relevantes para compreender o compromisso."
       }
     ]
   },
@@ -1562,7 +1918,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — literacia mediática e informacional",
+                "url": "https://www.unesco.org/en/media-information-literacy"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "conteudo-patrocinado",
@@ -1610,7 +1974,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — literacia mediática e informacional",
+                "url": "https://www.unesco.org/en/media-information-literacy"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -1666,7 +2038,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — literacia mediática e informacional",
+                "url": "https://www.unesco.org/en/media-information-literacy"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "imagens-fora-contexto",
@@ -1716,7 +2096,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — literacia mediática e informacional",
+                "url": "https://www.unesco.org/en/media-information-literacy"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -1750,6 +2138,20 @@
         "title": "UNESCO — literacia mediática e informacional",
         "url": "https://www.unesco.org/en/media-information-literacy"
       }
+    ],
+    "missions": [
+      {
+        "id": "missao-mediatica",
+        "title": "Notícia ou opinião?",
+        "question": "A frase esta é a melhor cidade para viver é…",
+        "answers": [
+          "uma avaliação",
+          "um facto universal",
+          "uma medição objetiva por si só"
+        ],
+        "correct": 0,
+        "explanation": "Melhor depende de critérios e valores que precisam de ser explicitados."
+      }
     ]
   },
   {
@@ -1757,11 +2159,1090 @@
     "title": "Literacia Cívica",
     "shortTitle": "Cívica",
     "icon": "landmark",
-    "description": "Compreender as instituições e participar de forma informada.",
+    "description": "Viver em sociedade com respeito, autonomia e participação.",
     "categories": [
+      {
+        "id": "viver-sociedade",
+        "title": "Viver em Sociedade",
+        "description": "O espaço comum também é nosso.",
+        "lessons": [
+          {
+            "id": "respeito-reciproco",
+            "title": "Respeito não depende de concordar",
+            "summary": "Respeitar alguém é reconhecer a sua dignidade, mesmo quando discordas.",
+            "quick": "Respeitar alguém é reconhecer a sua dignidade, mesmo quando discordas.",
+            "explain": [
+              "Pessoas diferentes podem ter hábitos, necessidades e opiniões diferentes. Ouvir antes de julgar ajuda a compreender. O respeito é recíproco: não exige aceitar humilhação ou discriminação."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Num grupo, uma pessoa prefere não participar numa brincadeira. É possível continuar sem a pressionar."
+            },
+            "quiz": {
+              "question": "Alguém recusa participar numa brincadeira. O que fazes?",
+              "answers": [
+                "Respeito a decisão e sigo sem excluir a pessoa",
+                "Insisto até ceder",
+                "Digo que estragou o ambiente"
+              ],
+              "correct": 0,
+              "explanation": "Respeitar a escolha permite convivência sem pressão."
+            },
+            "activity": "Pensa numa regra de convivência que proteja tanto o teu espaço como o dos outros.",
+            "keywords": [
+              "respeito",
+              "dignidade",
+              "convivência",
+              "diferença",
+              "regras",
+              "sociais"
+            ],
+            "aliases": [
+              "respeito",
+              "dignidade",
+              "convivência",
+              "diferença",
+              "regras",
+              "sociais"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "responsabilidade-partilhada",
+            "title": "Usar, cuidar, deixar pronto",
+            "summary": "Num espaço partilhado, as tuas ações afetam quem vem a seguir.",
+            "quick": "Num espaço partilhado, as tuas ações afetam quem vem a seguir.",
+            "explain": [
+              "Usar uma sala, cozinha ou equipamento comum implica cuidar e cumprir os acordos feitos. Uma regra pode ser discutida quando não é justa ou acessível. Responsabilidade inclui reparar um problema que causaste."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Depois de usar a cozinha comum, limpas a zona e avisas se algum utensílio se partiu."
+            },
+            "quiz": {
+              "question": "Partiste sem querer um objeto partilhado. Qual é um passo responsável?",
+              "answers": [
+                "Esconder o que aconteceu",
+                "Avisar e combinar como reparar",
+                "Culpar quem usou antes"
+              ],
+              "correct": 1,
+              "explanation": "Assumir o ocorrido e procurar uma solução cuida da confiança."
+            },
+            "activity": "Escolhe um espaço partilhado e propõe um acordo claro para o seu uso.",
+            "keywords": [
+              "responsabilidade",
+              "espaço",
+              "partilhado",
+              "regras",
+              "cuidado"
+            ],
+            "aliases": [
+              "responsabilidade",
+              "espaço",
+              "partilhado",
+              "regras",
+              "cuidado"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "civilidade",
+        "title": "Civilidade e Cortesia",
+        "description": "Pequenos gestos tornam o encontro mais fácil.",
+        "lessons": [
+          {
+            "id": "cumprimentar-agradecer",
+            "title": "Palavras pequenas, atenção concreta",
+            "summary": "Cumprimentar, agradecer e pedir licença reconhece a presença dos outros.",
+            "quick": "Cumprimentar, agradecer e pedir licença reconhece a presença dos outros.",
+            "explain": [
+              "A cortesia adapta-se ao contexto e à cultura. Um cumprimento pode ser verbal, um aceno ou outro gesto confortável. Não exige contacto físico nem uma resposta entusiástica de quem não pode ou não quer."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Precisas de passar num corredor ocupado: pedes licença e esperas que exista espaço."
+            },
+            "quiz": {
+              "question": "Para passar por alguém num corredor apertado, podes…",
+              "answers": [
+                "empurrar discretamente",
+                "exigir que saia",
+                "pedir licença e dar tempo para se afastar"
+              ],
+              "correct": 2,
+              "explanation": "Pedir licença comunica a necessidade sem invadir o espaço."
+            },
+            "activity": "Pratica um agradecimento específico por uma ajuda que recebeste.",
+            "keywords": [
+              "cumprimentar",
+              "agradecer",
+              "licença",
+              "cortesia",
+              "desculpa"
+            ],
+            "aliases": [
+              "cumprimentar",
+              "agradecer",
+              "licença",
+              "cortesia",
+              "desculpa"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "esperar-pela-vez",
+            "title": "A tua vez também chega",
+            "summary": "Respeitar a vez dos outros evita transformar um espaço comum numa disputa.",
+            "quick": "Respeitar a vez dos outros evita transformar um espaço comum numa disputa.",
+            "explain": [
+              "Observa a fila e pergunta onde começa se não for claro. Dá espaço a quem está a ser atendido. Algumas pessoas podem ter prioridade ou precisar de apoio; confirma com o serviço sem fazer suposições sobre o aspeto delas."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Chegas a um balcão sem senhas e perguntas quem é a última pessoa."
+            },
+            "quiz": {
+              "question": "Não percebes a ordem de uma fila. Qual é a melhor abordagem?",
+              "answers": [
+                "Perguntar com calma onde deves esperar",
+                "Passar à frente",
+                "Decidir pela aparência de quem está à espera"
+              ],
+              "correct": 0,
+              "explanation": "Perguntar esclarece a ordem sem retirar a vez a ninguém."
+            },
+            "activity": "Imagina uma forma respeitosa de esclarecer a ordem numa fila.",
+            "keywords": [
+              "vez",
+              "fila",
+              "silêncio",
+              "espaço",
+              "prioridade"
+            ],
+            "aliases": [
+              "vez",
+              "fila",
+              "silêncio",
+              "espaço",
+              "prioridade"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "cavalheirismo",
+        "title": "Cavalheirismo Contemporâneo",
+        "description": "Consideração de pessoa para pessoa.",
+        "lessons": [
+          {
+            "id": "gentileza-sem-divida",
+            "title": "Gentileza não cria dívida",
+            "summary": "Um gesto de cuidado não obriga a outra pessoa a dar atenção, afeto ou recompensa.",
+            "quick": "Um gesto de cuidado não obriga a outra pessoa a dar atenção, afeto ou recompensa.",
+            "explain": [
+              "Cavalheirismo contemporâneo significa consideração, não superioridade ou um papel reservado a um género. Qualquer pessoa pode segurar uma porta, oferecer lugar ou ajudar alguém carregado. O gesto deve ser adequado, seguro e livre de cobranças."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Seguras a porta a quem vem imediatamente atrás e segues o teu caminho, sem esperar mais do que a passagem."
+            },
+            "quiz": {
+              "question": "Depois de fazeres uma gentileza, a outra pessoa…",
+              "answers": [
+                "fica obrigada a aceitar um convite",
+                "continua livre de decidir o que quer",
+                "tem de retribuir com afeto"
+              ],
+              "correct": 1,
+              "explanation": "Uma ajuda oferecida não cria uma dívida emocional."
+            },
+            "activity": "Escolhe um gesto simples que possas oferecer sem esperar nada em troca.",
+            "keywords": [
+              "cavalheirismo",
+              "gentileza",
+              "porta",
+              "lugar",
+              "género",
+              "dívida",
+              "emocional"
+            ],
+            "aliases": [
+              "cavalheirismo",
+              "gentileza",
+              "porta",
+              "lugar",
+              "género",
+              "dívida",
+              "emocional"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "oferecer-sem-impor",
+            "title": "Ajuda que respeita um não",
+            "summary": "Oferecer ajuda é abrir uma possibilidade, não decidir pela outra pessoa.",
+            "quick": "Oferecer ajuda é abrir uma possibilidade, não decidir pela outra pessoa.",
+            "explain": [
+              "Pergunta antes de pegar em objetos, tocar ou acompanhar alguém. Não deduzas incapacidade com base na idade ou deficiência. Proteger não é controlar: combinar uma mensagem de chegada não dá direito a exigir localização contínua."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Perguntas se alguém quer ajuda com os sacos. A pessoa recusa; respeitas e deixas espaço."
+            },
+            "quiz": {
+              "question": "Uma pessoa recusa a tua oferta de ajuda. Como respondes?",
+              "answers": [
+                "Insisto porque sei melhor",
+                "Agarro nos sacos mesmo assim",
+                "Respeito a recusa"
+              ],
+              "correct": 2,
+              "explanation": "A autonomia da pessoa inclui poder recusar ajuda."
+            },
+            "activity": "Escreve uma oferta de ajuda que deixe claro que a pessoa pode dizer não.",
+            "keywords": [
+              "ajuda",
+              "recusa",
+              "autonomia",
+              "acompanhar",
+              "proteger",
+              "controlar",
+              "segurança"
+            ],
+            "aliases": [
+              "ajuda",
+              "recusa",
+              "autonomia",
+              "acompanhar",
+              "proteger",
+              "controlar",
+              "segurança"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "etiqueta-social",
+        "title": "Etiqueta Social",
+        "description": "Cuidar de um encontro antes, durante e depois.",
+        "lessons": [
+          {
+            "id": "convites-e-horarios",
+            "title": "Um convite também precisa de resposta",
+            "summary": "Confirmar presença e avisar de um atraso ajuda quem está a organizar.",
+            "quick": "Confirmar presença e avisar de um atraso ajuda quem está a organizar.",
+            "explain": [
+              "Se recebeste um convite, responde no prazo combinado. Avisa assim que souberes que vais chegar mais tarde, sem exigir que todos esperem. A pontualidade é consideração, não motivo para humilhar quem teve um imprevisto."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "O jantar é às 20h e percebes que só chegas às 20h40. Avisas e perguntas como é melhor proceder."
+            },
+            "quiz": {
+              "question": "Vais chegar 40 minutos depois da hora combinada. O que ajuda?",
+              "answers": [
+                "Avisar assim que possível e respeitar o plano do anfitrião",
+                "Chegar sem dizer nada",
+                "Exigir que ninguém comece"
+              ],
+              "correct": 0,
+              "explanation": "Avisar permite ajustar expectativas e a organização do encontro."
+            },
+            "activity": "Prepara uma mensagem curta para comunicar um atraso fictício.",
+            "keywords": [
+              "convite",
+              "confirmar",
+              "presença",
+              "pontualidade",
+              "horas",
+              "atraso"
+            ],
+            "aliases": [
+              "convite",
+              "confirmar",
+              "presença",
+              "pontualidade",
+              "horas",
+              "atraso"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "receber-e-agradecer",
+            "title": "Ser convidado, receber com cuidado",
+            "summary": "Um encontro acolhedor tem espaço para necessidades e limites diferentes.",
+            "quick": "Um encontro acolhedor tem espaço para necessidades e limites diferentes.",
+            "explain": [
+              "Ao receber, pergunta por necessidades relevantes sem invadir a privacidade. Como convidado, combina antes de levar alguém ou algo; oferecer comida ou um presente não é obrigatório. Agradece o convite e despede-te com consideração."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Perguntas se faz sentido levar alguma coisa e confirmas antes de convidar outra pessoa."
+            },
+            "quiz": {
+              "question": "Queres levar mais alguém a um jantar. Primeiro…",
+              "answers": [
+                "apareces acompanhado",
+                "confirmas com quem convidou",
+                "anuncias a decisão à chegada"
+              ],
+              "correct": 1,
+              "explanation": "O anfitrião precisa de poder planear e decidir sem pressão."
+            },
+            "activity": "Escreve uma mensagem de agradecimento por um convite.",
+            "keywords": [
+              "receber",
+              "convidado",
+              "anfitrião",
+              "despedir",
+              "agradecer",
+              "convite"
+            ],
+            "aliases": [
+              "receber",
+              "convidado",
+              "anfitrião",
+              "despedir",
+              "agradecer",
+              "convite"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "etiqueta-mesa",
+        "title": "Etiqueta à Mesa",
+        "description": "Partilhar a refeição, respeitar as pessoas.",
+        "lessons": [
+          {
+            "id": "presenca-a-mesa",
+            "title": "Estar presente à mesa",
+            "summary": "Dar atenção à refeição e às pessoas ajuda a partilhar o momento.",
+            "quick": "Dar atenção à refeição e às pessoas ajuda a partilhar o momento.",
+            "explain": [
+              "Adota uma postura confortável que respeite o espaço dos outros, sem julgar necessidades físicas. Usa o guardanapo de forma prática. Combina o uso do telemóvel; se esperas uma chamada importante, podes explicar sem expor detalhes."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Silencias notificações durante o jantar e avisas que precisas de atender uma chamada breve."
+            },
+            "quiz": {
+              "question": "Se precisas de atender uma chamada à mesa, podes…",
+              "answers": [
+                "pôr em alta-voz para todos ouvirem",
+                "ignorar todos sem explicar",
+                "avisar brevemente e afastar-te quando possível"
+              ],
+              "correct": 2,
+              "explanation": "Uma explicação curta e menos ruído respeitam o encontro e a privacidade."
+            },
+            "activity": "Pensa num acordo simples sobre telemóveis numa refeição partilhada.",
+            "keywords": [
+              "mesa",
+              "postura",
+              "guardanapo",
+              "telemóvel",
+              "atenção"
+            ],
+            "aliases": [
+              "mesa",
+              "postura",
+              "guardanapo",
+              "telemóvel",
+              "atenção"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "partilha-refeicao",
+            "title": "Partilhar sem fiscalizar o prato",
+            "summary": "Cortesia à mesa inclui repartir, perguntar e respeitar as escolhas alimentares.",
+            "quick": "Cortesia à mesa inclui repartir, perguntar e respeitar as escolhas alimentares.",
+            "explain": [
+              "Confirma como a refeição será servida e se faz sentido esperar. Usa utensílios adequados para partilhar e evita ocupar o espaço dos outros. Não comentes corpos, quantidades ou restrições alimentares sem convite. Trata com respeito quem prepara e serve."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Passas a travessa e deixas que cada pessoa decida o que quer comer."
+            },
+            "quiz": {
+              "question": "Alguém não quer provar um prato. Qual reação respeita a pessoa?",
+              "answers": [
+                "Aceitar sem insistir nem comentar o corpo",
+                "Obrigar a provar por educação",
+                "Interrogar em público sobre a saúde"
+              ],
+              "correct": 0,
+              "explanation": "Uma recusa não precisa de ser justificada com informação privada."
+            },
+            "activity": "Descreve como oferecer comida deixando espaço para a pessoa recusar.",
+            "keywords": [
+              "mesa",
+              "partilha",
+              "refeição",
+              "servir",
+              "respeito",
+              "alimentos"
+            ],
+            "aliases": [
+              "mesa",
+              "partilha",
+              "refeição",
+              "servir",
+              "respeito",
+              "alimentos"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "comunicacao",
+        "title": "Comunicação",
+        "description": "Compreender antes de responder.",
+        "lessons": [
+          {
+            "id": "ouvir-discordar",
+            "title": "Discordar sem diminuir",
+            "summary": "Podes questionar uma ideia sem atacar a dignidade de quem a expressa.",
+            "quick": "Podes questionar uma ideia sem atacar a dignidade de quem a expressa.",
+            "explain": [
+              "Deixa a pessoa terminar e confirma o que entendeste. Faz perguntas e apresenta razões concretas. Ouvir não significa concordar; podes terminar uma conversa que se tornou ofensiva, explicando o teu limite quando seguro."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Não concordas com uma proposta e perguntas como resolveria um problema específico, em vez de insultar o autor."
+            },
+            "quiz": {
+              "question": "Qual frase ajuda a discordar de forma clara?",
+              "answers": [
+                "Isso só pode vir de alguém como tu",
+                "Vejo de outra forma; posso explicar a minha razão?",
+                "Cala-te, não sabes nada"
+              ],
+              "correct": 1,
+              "explanation": "A frase apresenta desacordo e abre espaço para razões sem ataque pessoal."
+            },
+            "activity": "Reescreve uma discordância de forma focada na ideia, sem insultos.",
+            "keywords": [
+              "ouvir",
+              "interromper",
+              "discordar",
+              "perguntar",
+              "diálogo",
+              "conversa"
+            ],
+            "aliases": [
+              "ouvir",
+              "interromper",
+              "discordar",
+              "perguntar",
+              "diálogo",
+              "conversa"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "pedir-desculpa",
+            "title": "Uma desculpa reconhece e repara",
+            "summary": "Pedir desculpa implica reconhecer o que fizeste e o efeito que teve.",
+            "quick": "Pedir desculpa implica reconhecer o que fizeste e o efeito que teve.",
+            "explain": [
+              "Descreve o erro sem transferir a culpa para quem ficou magoado. Quando possível, propõe uma reparação e muda o comportamento. A outra pessoa pode precisar de tempo; uma desculpa não obriga ao perdão imediato."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Interrompeste alguém várias vezes: reconheces isso e dás espaço para terminar."
+            },
+            "quiz": {
+              "question": "Qual frase assume melhor um erro?",
+              "answers": [
+                "Desculpa se és sensível demais",
+                "Desculpa, mas a culpa é tua",
+                "Interrompi-te. Desculpa. Quero ouvir o que faltava dizer"
+              ],
+              "correct": 2,
+              "explanation": "Reconhece uma ação concreta e propõe um comportamento reparador."
+            },
+            "activity": "Escreve uma desculpa com reconhecimento do erro e um passo de reparação.",
+            "keywords": [
+              "erro",
+              "desculpa",
+              "reparação",
+              "responsabilidade",
+              "perdão"
+            ],
+            "aliases": [
+              "erro",
+              "desculpa",
+              "reparação",
+              "responsabilidade",
+              "perdão"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "limites-consentimento",
+        "title": "Limites e Consentimento",
+        "description": "Respeito também é saber parar.",
+        "lessons": [
+          {
+            "id": "espaco-e-toque",
+            "title": "O corpo e o espaço de cada pessoa",
+            "summary": "Proximidade e toque precisam de respeitar o conforto e a vontade da outra pessoa.",
+            "quick": "Proximidade e toque precisam de respeitar o conforto e a vontade da outra pessoa.",
+            "explain": [
+              "Não presumir é uma forma de cuidado. Pergunta quando houver dúvida e aceita a resposta sem pressionar. Um sim anterior não vale para todas as situações e pode mudar. Uma pessoa não precisa de se justificar para recusar um abraço."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Vais cumprimentar alguém e perguntas se prefere um abraço ou um aceno."
+            },
+            "quiz": {
+              "question": "Uma pessoa que antes aceitava abraços hoje recusa. O que fazes?",
+              "answers": [
+                "Respeito a escolha de hoje",
+                "Lembro que aceitou ontem",
+                "Abraço para mostrar carinho"
+              ],
+              "correct": 0,
+              "explanation": "A vontade pode mudar; o consentimento não é uma autorização permanente."
+            },
+            "activity": "Imagina um cumprimento que não dependa de toque físico.",
+            "keywords": [
+              "espaço",
+              "pessoal",
+              "toque",
+              "consentimento",
+              "não",
+              "retirar",
+              "limites"
+            ],
+            "aliases": [
+              "espaço",
+              "pessoal",
+              "toque",
+              "consentimento",
+              "não",
+              "retirar",
+              "limites"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "APAV — educação para a cidadania, respeito e consentimento",
+                "url": "https://apav.pt/wp-content/uploads/2025/08/PARECER-APAV_Referencial-para-a-disciplina-de-cidadania_JUL_2025.pdf"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "fotografias-e-privacidade",
+            "title": "Perguntar antes de publicar",
+            "summary": "Aceitar uma fotografia não significa aceitar qualquer partilha dessa imagem.",
+            "quick": "Aceitar uma fotografia não significa aceitar qualquer partilha dessa imagem.",
+            "explain": [
+              "Confirma se a pessoa quer ser fotografada e onde a imagem pode ser usada. Não partilhes mensagens ou detalhes privados sem autorização. Se alguém retirar a autorização, interrompe novas partilhas e procura remover o que controlas."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Uma amiga aceita uma foto para guardar, mas não quer que apareça nas redes."
+            },
+            "quiz": {
+              "question": "Podes publicar a foto só porque a pessoa aceitou tirá-la?",
+              "answers": [
+                "Sim, são a mesma decisão",
+                "Não; confirma a autorização para publicar",
+                "Sim, se tiver muitos gostos"
+              ],
+              "correct": 1,
+              "explanation": "Tirar e publicar são utilizações diferentes e merecem acordo claro."
+            },
+            "activity": "Antes de publicar uma foto fictícia de grupo, que duas perguntas farias?",
+            "keywords": [
+              "fotografias",
+              "partilha",
+              "privacidade",
+              "imagem",
+              "consentimento"
+            ],
+            "aliases": [
+              "fotografias",
+              "partilha",
+              "privacidade",
+              "imagem",
+              "consentimento"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "APAV — educação para a cidadania, respeito e consentimento",
+                "url": "https://apav.pt/wp-content/uploads/2025/08/PARECER-APAV_Referencial-para-a-disciplina-de-cidadania_JUL_2025.pdf"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "espaco-publico",
+        "title": "Espaço Público",
+        "description": "O caminho deve continuar aberto para todos.",
+        "lessons": [
+          {
+            "id": "ruido-e-lixo",
+            "title": "O teu volume ocupa espaço",
+            "summary": "Reduzir ruído e recolher o teu lixo cuida de quem partilha o lugar.",
+            "quick": "Reduzir ruído e recolher o teu lixo cuida de quem partilha o lugar.",
+            "explain": [
+              "Usa auscultadores quando adequado e mantém volume que te permita perceber o ambiente. Não deixes resíduos para outra pessoa resolver. Se não houver recipiente adequado, guarda o lixo até encontrares um destino correto."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "No transporte, desligas a reprodução em alta-voz e levas a embalagem contigo."
+            },
+            "quiz": {
+              "question": "Não há caixote perto de ti. O que fazes com a embalagem?",
+              "answers": [
+                "Deixo num banco",
+                "Atiro para uma zona escondida",
+                "Guardo até encontrar um local adequado"
+              ],
+              "correct": 2,
+              "explanation": "Um espaço partilhado não transfere para outros a responsabilidade pelos teus resíduos."
+            },
+            "activity": "Identifica uma forma de reduzir ruído ou resíduos numa deslocação.",
+            "keywords": [
+              "ruído",
+              "lixo",
+              "volume",
+              "transporte",
+              "espaço",
+              "público"
+            ],
+            "aliases": [
+              "ruído",
+              "lixo",
+              "volume",
+              "transporte",
+              "espaço",
+              "público"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "acessibilidade-e-prioridade",
+            "title": "Deixar passagem é incluir",
+            "summary": "Passagens, rampas e lugares de apoio precisam de estar utilizáveis.",
+            "quick": "Passagens, rampas e lugares de apoio precisam de estar utilizáveis.",
+            "explain": [
+              "Evita bloquear portas, rampas e corredores com objetos ou com o corpo. Dá tempo para as pessoas entrarem e saírem. Podes oferecer o lugar sem fazer diagnósticos pela aparência; algumas necessidades não são visíveis."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Num autocarro cheio, perguntas se alguém precisa do teu lugar, sem exigir explicações."
+            },
+            "quiz": {
+              "question": "Uma passagem acessível parece livre. Podes ocupá-la por conveniência?",
+              "answers": [
+                "Não; deve continuar desimpedida",
+                "Sim, se for por poucos minutos",
+                "Sim, se ninguém reclamar"
+              ],
+              "correct": 0,
+              "explanation": "A acessibilidade precisa de estar disponível quando a pessoa chega, não só depois de pedir."
+            },
+            "activity": "Num trajeto imaginário, identifica uma barreira que poderias evitar criar.",
+            "keywords": [
+              "acessibilidade",
+              "passagem",
+              "prioridade",
+              "transporte",
+              "rampa",
+              "lugar"
+            ],
+            "aliases": [
+              "acessibilidade",
+              "passagem",
+              "prioridade",
+              "transporte",
+              "rampa",
+              "lugar"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "respeito-trabalhadores",
+        "title": "Respeito por Trabalhadores",
+        "description": "A função nunca reduz a dignidade.",
+        "lessons": [
+          {
+            "id": "atendimento-com-respeito",
+            "title": "Pedir um serviço com respeito",
+            "summary": "Um problema no serviço pode ser resolvido sem humilhar quem está a trabalhar.",
+            "quick": "Um problema no serviço pode ser resolvido sem humilhar quem está a trabalhar.",
+            "explain": [
+              "Dirige-te às pessoas com clareza e educação, seja na restauração, transportes, segurança ou serviços públicos. Distingue o problema de um ataque pessoal. A pressão do momento não justifica insultos ou ameaças."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "O pedido veio trocado. Explicas o que pediste e perguntas como corrigir."
+            },
+            "quiz": {
+              "question": "Como comunicas um erro no pedido?",
+              "answers": [
+                "Com um insulto para acelerar",
+                "Descrevendo o erro e pedindo correção",
+                "Filmando o trabalhador para o expor"
+              ],
+              "correct": 1,
+              "explanation": "O pedido de correção pode ser firme sem retirar dignidade."
+            },
+            "activity": "Transforma uma reclamação agressiva numa descrição clara do problema.",
+            "keywords": [
+              "trabalhadores",
+              "atendimento",
+              "restauração",
+              "transportes",
+              "dignidade"
+            ],
+            "aliases": [
+              "trabalhadores",
+              "atendimento",
+              "restauração",
+              "transportes",
+              "dignidade"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "trabalho-invisivel",
+            "title": "Respeitar também quem não está à vista",
+            "summary": "Limpeza, manutenção e apoio tornam os espaços utilizáveis e merecem consideração.",
+            "quick": "Limpeza, manutenção e apoio tornam os espaços utilizáveis e merecem consideração.",
+            "explain": [
+              "Evita criar trabalho desnecessário por descuido. Cumpre indicações de segurança e dá espaço a quem está a realizar tarefas. Podes contestar uma regra ou serviço pelos canais adequados sem desvalorizar a profissão de ninguém."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Uma zona está a ser limpa e sinalizada; usas o percurso alternativo em vez de atravessar."
+            },
+            "quiz": {
+              "question": "Perante uma zona de limpeza sinalizada, uma atitude cuidadosa é…",
+              "answers": [
+                "atravessar para poupar segundos",
+                "retirar o sinal",
+                "respeitar o desvio e o trabalho em curso"
+              ],
+              "correct": 2,
+              "explanation": "A sinalização protege quem trabalha e quem utiliza o espaço."
+            },
+            "activity": "Reconhece uma tarefa de apoio que facilita o teu dia e como a podes respeitar.",
+            "keywords": [
+              "limpeza",
+              "manutenção",
+              "segurança",
+              "serviços",
+              "públicos",
+              "trabalho"
+            ],
+            "aliases": [
+              "limpeza",
+              "manutenção",
+              "segurança",
+              "serviços",
+              "públicos",
+              "trabalho"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
+      {
+        "id": "solidariedade",
+        "title": "Solidariedade",
+        "description": "Ajudar com atenção, compromisso e limites.",
+        "lessons": [
+          {
+            "id": "ajuda-na-comunidade",
+            "title": "Perguntar o que faz falta",
+            "summary": "Uma ajuda útil parte das necessidades de quem a recebe.",
+            "quick": "Uma ajuda útil parte das necessidades de quem a recebe.",
+            "explain": [
+              "Escuta antes de oferecer uma solução. Na vizinhança ou numa associação, combina o que podes fazer e cumpre o acordo. Evita expor histórias, imagens ou dificuldades de pessoas vulneráveis para mostrar a tua ajuda."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Uma associação explica quais os bens de que precisa; confirmas a lista antes de doar."
+            },
+            "quiz": {
+              "question": "Antes de organizar uma ajuda, convém…",
+              "answers": [
+                "confirmar necessidades e combinar o apoio",
+                "decidir tudo sem ouvir",
+                "publicar os dados de quem vai receber"
+              ],
+              "correct": 0,
+              "explanation": "Escutar evita ajuda desadequada e protege a autonomia e privacidade."
+            },
+            "activity": "Identifica uma necessidade fictícia da comunidade e uma forma de a confirmar.",
+            "keywords": [
+              "solidariedade",
+              "comunidade",
+              "vizinhança",
+              "ajuda",
+              "vulnerabilidade"
+            ],
+            "aliases": [
+              "solidariedade",
+              "comunidade",
+              "vizinhança",
+              "ajuda",
+              "vulnerabilidade"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Conselho da Europa — competências para uma cultura democrática",
+                "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          },
+          {
+            "id": "voluntariado-responsavel",
+            "title": "Um compromisso que cabe na tua vida",
+            "summary": "Voluntariado responsável combina disponibilidade, preparação e respeito pelas pessoas.",
+            "quick": "Voluntariado responsável combina disponibilidade, preparação e respeito pelas pessoas.",
+            "explain": [
+              "Escolhe uma atividade adequada às tuas capacidades e ao tempo que podes dar. Confirma orientação e regras da organização. Não substituas serviços especializados numa emergência: procura segurança e pede ajuda competente quando necessário."
+            ],
+            "example": {
+              "title": "Uma situação do dia a dia",
+              "text": "Queres colaborar semanalmente; perguntas pelas tarefas, formação e compromisso antes de aceitar."
+            },
+            "quiz": {
+              "question": "Antes de assumir uma tarefa de voluntariado, verificas…",
+              "answers": [
+                "se rende boas fotografias",
+                "se tens disponibilidade, orientação e condições para a cumprir",
+                "se podes ignorar todas as regras"
+              ],
+              "correct": 1,
+              "explanation": "Um compromisso sustentável beneficia quem ajuda e quem recebe apoio."
+            },
+            "activity": "Escreve duas perguntas que farias a uma organização antes de colaborar.",
+            "keywords": [
+              "voluntariado",
+              "compromisso",
+              "comunidade",
+              "emergência",
+              "apoio"
+            ],
+            "aliases": [
+              "voluntariado",
+              "compromisso",
+              "comunidade",
+              "emergência",
+              "apoio"
+            ],
+            "xp": 20,
+            "minutes": 3,
+            "variants": {},
+            "introducedIn": 2,
+            "sources": [
+              {
+                "title": "Portugal Voluntário — enquadramento do voluntariado",
+                "url": "https://portugalvoluntario.pt/cs2i/docs/Regulamento-Apoio-Voluntariado.pdf"
+              }
+            ],
+            "sourceNote": "Os princípios de respeito e autonomia apoiam estes exercícios. Os exemplos de cortesia são propostas de convivência, não regras universais de etiqueta."
+          }
+        ]
+      },
       {
         "id": "civica-0",
         "title": "Instituições",
+        "description": "Compreender quem decide e quem faz.",
         "lessons": [
           {
             "id": "instituicoes",
@@ -1811,7 +3292,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Assembleia da República — competências",
+                "url": "https://www.parlamento.pt/Parlamento/Paginas/Competencias.aspx"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "parlamento-e-governo",
@@ -1859,13 +3348,22 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Assembleia da República — competências",
+                "url": "https://www.parlamento.pt/Parlamento/Paginas/Competencias.aspx"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
       {
         "id": "civica-1",
         "title": "Participação",
+        "description": "Fazer parte das decisões em comum.",
         "lessons": [
           {
             "id": "participar",
@@ -1915,7 +3413,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Assembleia da República — competências",
+                "url": "https://www.parlamento.pt/Parlamento/Paginas/Competencias.aspx"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "dinheiro-publico",
@@ -1965,7 +3471,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "Assembleia da República — competências",
+                "url": "https://www.parlamento.pt/Parlamento/Paginas/Competencias.aspx"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -1996,8 +3510,86 @@
     },
     "sources": [
       {
+        "title": "Conselho da Europa — competências para uma cultura democrática",
+        "url": "https://www.coe.int/en/web/compasito/competences-for-democratic-culture"
+      },
+      {
+        "title": "APAV — educação para a cidadania, respeito e consentimento",
+        "url": "https://apav.pt/wp-content/uploads/2025/08/PARECER-APAV_Referencial-para-a-disciplina-de-cidadania_JUL_2025.pdf"
+      },
+      {
+        "title": "Portugal Voluntário — enquadramento do voluntariado",
+        "url": "https://portugalvoluntario.pt/cs2i/docs/Regulamento-Apoio-Voluntariado.pdf"
+      },
+      {
         "title": "Assembleia da República — competências",
         "url": "https://www.parlamento.pt/Parlamento/Paginas/Competencias.aspx"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-civica",
+        "title": "Encaminhar um problema",
+        "question": "Queres comunicar um problema num espaço público. Começas por…",
+        "answers": [
+          "publicar dados pessoais de funcionários",
+          "confirmar a entidade responsável e o canal oficial",
+          "enviar a uma instituição ao acaso"
+        ],
+        "correct": 1,
+        "explanation": "Competência e canal adequado ajudam a encaminhar o assunto."
+      },
+      {
+        "id": "civica-porta",
+        "title": "Uma porta, um gesto",
+        "question": "Alguém vem imediatamente atrás quando entras. Qual gesto pode ajudar?",
+        "answers": [
+          "Segurar a porta quando for seguro, sem esperar recompensa",
+          "Fechar de propósito",
+          "Exigir agradecimento antes de deixar passar"
+        ],
+        "correct": 0,
+        "explanation": "Uma pequena atenção pode facilitar a passagem, sem criar obrigação.",
+        "scene": "door"
+      },
+      {
+        "id": "civica-jantar",
+        "title": "Jantar às 20h",
+        "question": "Só vais chegar às 20h40. Qual é a decisão mais atenciosa?",
+        "answers": [
+          "Não dizer nada",
+          "Avisar assim que possível e aceitar que comecem",
+          "Exigir que mudem todos os planos"
+        ],
+        "correct": 1,
+        "explanation": "O aviso dá a quem recebe a possibilidade de ajustar a organização.",
+        "scene": "clock"
+      },
+      {
+        "id": "civica-transporte",
+        "title": "Um lugar disponível",
+        "question": "Uma pessoa idosa entra num transporte cheio. Como podes agir?",
+        "answers": [
+          "Decidir que é incapaz",
+          "Ignorar qualquer pedido",
+          "Oferecer o lugar com discrição, aceitando a resposta"
+        ],
+        "correct": 2,
+        "explanation": "Oferecer ajuda não implica fazer suposições nem impor a aceitação.",
+        "scene": "seat"
+      },
+      {
+        "id": "civica-recusa",
+        "title": "Obrigado, não preciso",
+        "question": "Uma pessoa recusa ajuda com os sacos. O que fazes?",
+        "answers": [
+          "Respeito a recusa e deixo espaço",
+          "Insisto até aceitar",
+          "Pego nos sacos sem perguntar"
+        ],
+        "correct": 0,
+        "explanation": "A ajuda é uma oferta; a pessoa mantém a autonomia para recusar.",
+        "scene": "help"
       }
     ]
   },
@@ -2064,7 +3656,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — inteligência artificial",
+                "url": "https://www.unesco.org/en/artificial-intelligence"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "alucinacoes",
@@ -2112,7 +3712,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — inteligência artificial",
+                "url": "https://www.unesco.org/en/artificial-intelligence"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -2168,7 +3776,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — inteligência artificial",
+                "url": "https://www.unesco.org/en/artificial-intelligence"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "verificar-ia",
@@ -2218,7 +3834,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "UNESCO — inteligência artificial",
+                "url": "https://www.unesco.org/en/artificial-intelligence"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -2251,6 +3875,20 @@
       {
         "title": "UNESCO — inteligência artificial",
         "url": "https://www.unesco.org/en/artificial-intelligence"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-ia",
+        "title": "Uma resposta convincente",
+        "question": "A IA apresenta uma referência para justificar uma afirmação. O que fazes?",
+        "answers": [
+          "Aceito sem ler",
+          "Uso só o título",
+          "Confirmo que existe e que sustenta a afirmação"
+        ],
+        "correct": 2,
+        "explanation": "Uma referência pode ser inventada ou não sustentar o texto."
       }
     ]
   },
@@ -2313,7 +3951,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "gov.pt — contactos de emergência",
+                "url": "https://www.gov.pt/guias/contactos-de-emergencia-em-portugal"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "limites",
@@ -2363,7 +4009,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "gov.pt — contactos de emergência",
+                "url": "https://www.gov.pt/guias/contactos-de-emergencia-em-portugal"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       },
@@ -2419,7 +4073,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "gov.pt — contactos de emergência",
+                "url": "https://www.gov.pt/guias/contactos-de-emergencia-em-portugal"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           },
           {
             "id": "ligar-112",
@@ -2473,7 +4135,15 @@
             ],
             "xp": 20,
             "variants": {},
-            "minutes": 3
+            "minutes": 3,
+            "introducedIn": 1,
+            "sources": [
+              {
+                "title": "gov.pt — contactos de emergência",
+                "url": "https://www.gov.pt/guias/contactos-de-emergencia-em-portugal"
+              }
+            ],
+            "sourceNote": "Consulta a fonte principal e compara com as referências complementares da literacia."
           }
         ]
       }
@@ -2506,6 +4176,20 @@
       {
         "title": "gov.pt — contactos de emergência",
         "url": "https://www.gov.pt/guias/contactos-de-emergencia-em-portugal"
+      }
+    ],
+    "missions": [
+      {
+        "id": "missao-seguranca",
+        "title": "Uma decisão prudente",
+        "question": "Num local desconhecido, uma interação torna-se ameaçadora. Qual é a prioridade?",
+        "answers": [
+          "Afastar-te para um local seguro e procurar ajuda",
+          "Filmar de perto",
+          "Perseguir a pessoa"
+        ],
+        "correct": 0,
+        "explanation": "A prioridade é reduzir exposição e procurar segurança."
       }
     ]
   }

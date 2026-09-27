@@ -68,6 +68,10 @@
     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.book}</svg>`;
   const bar = (list, label = "") =>
     `<div class="progress-block"><div class="progress-label"><span>${e(label || `${Progress.count(list)} de ${list.length} lições concluídas`)}</span><strong>${Progress.percent(list)}%</strong></div><progress max="100" value="${Progress.percent(list)}" aria-label="${e(label || "Progresso das lições")}">${Progress.percent(list)}%</progress></div>`;
+  const ui = LearningUI.init({ data, all, e, icon, bar, areaURL, lessonURL });
+  const currentArea =
+    data.find((a) => a.id === id) || all.find((l) => l.id === id)?.area;
+  document.body.setAttribute("style", LearningUI.theme(currentArea?.id));
   const link = (href, label, name, active) =>
     `<a href="${href}" class="nav-link${active ? " active" : ""}" ${active ? 'aria-current="page"' : ""} title="${e(label)}">${icon(name)}<span>${e(label)}</span></a>`;
   const nav = document.querySelector("#sidebar");
@@ -101,7 +105,11 @@
       ? "Expandir menu"
       : "Recolher menu";
   }
-  setCollapsed(Store.preference("sidebar", "open") === "closed");
+  const tablet = matchMedia("(min-width: 769px) and (max-width: 1100px)");
+  const preferredCollapsed = () =>
+    tablet.matches || Store.preference("sidebar", "open") === "closed";
+  setCollapsed(preferredCollapsed());
+  tablet.addEventListener("change", () => setCollapsed(preferredCollapsed()));
   nav.inert = media.matches;
   const navTooltip = document.createElement("div");
   navTooltip.className = "nav-tooltip";
@@ -167,6 +175,12 @@
     const warning = document.querySelector("#storage-warning");
     warning.hidden = Store.available;
   }
+  Store.recognize(
+    Progress.achievements()
+      .filter((a) => a.unlocked)
+      .map((a) => a.title),
+    true,
+  );
   let previousAchievements = Progress.achievements()
     .filter((a) => a.unlocked)
     .map((a) => a.title);
@@ -185,12 +199,31 @@
       .filter((a) => a.unlocked)
       .map((a) => a.title);
     const fresh = unlocked.filter((t) => !previousAchievements.includes(t));
-    if (fresh.length) toast("Conquista desbloqueada: " + fresh.join(", "));
+    Store.recognize(unlocked);
+    if (fresh.length) {
+      toast("Conquista desbloqueada: " + fresh.join(", "));
+      const dialog = document.querySelector("#achievement-dialog");
+      if (dialog) {
+        document.querySelector("#achievement-name").textContent =
+          fresh.join(" · ");
+        if (!dialog.open) dialog.showModal();
+      }
+    }
     previousAchievements = unlocked;
   });
   stats();
-  const sourceList = (area) =>
-    `<details class="sources"><summary>Fontes e aprofundamento</summary><ul>${area.sources.map((s) => `<li><a href="${e(s.url)}" target="_blank" rel="noopener noreferrer">${e(s.title)} ↗</a></li>`).join("")}</ul><p class="small">Conteúdo introdutório revisto em setembro de 2026. Exemplos e valores apresentados nos exercícios são fictícios.</p></details>`;
+  const dialog = document.querySelector("#achievement-dialog");
+  if (dialog) {
+    document.querySelector("#achievement-close").onclick = () => {
+      dialog.close();
+      if (!document.activeElement || document.activeElement.disabled)
+        main.focus();
+    };
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+  const sourceList = (area, lesson) => ui.sourceMarkup(area, lesson);
   const notice = (area) =>
     ["financeira", "juridica", "alimentar"].includes(area.id)
       ? `<p class="notice">Conteúdo educativo geral. Não substitui aconselhamento ${area.id === "financeira" ? "financeiro" : area.id === "juridica" ? "jurídico" : "nutricional ou médico"} adaptado à tua situação.</p>`
@@ -210,19 +243,15 @@
   }
   function card(area) {
     const list = area.categories.flatMap((c) => c.lessons);
-    return `<article class="literacy-card"><div class="card-top"><span class="area-icon tone-${e(area.id)}">${icon(area.icon)}</span><span class="small">${list.length} lições</span></div><h3>${e(area.title)}</h3><p>${e(area.description)}</p>${bar(list)}<a class="explore" href="${areaURL(area)}" aria-label="Explorar ${e(area.title)}">Explorar ${icon("arrow")}</a></article>`;
+    return `<article class="literacy-card" style="${ui.theme(area.id)}"><div class="card-top"><span class="area-icon tone-${e(area.id)}">${icon(area.icon)}</span><span class="small">${list.length} lições</span></div><h3>${e(area.title)}</h3><p>${e(area.description)}</p>${bar(list)}<a class="explore" href="${areaURL(area)}" aria-label="Explorar ${e(area.title)}">Explorar ${icon("arrow")}</a></article>`;
   }
   function home() {
-    const next = all.find((l) => l.id === Store.state.lastLesson) || all[0];
-    main.innerHTML = `<section class="hero"><div><p class="eyebrow">CONHECIMENTO QUE FAZ PARTE DA VIDA</p><h1>Aprender para<br><em>decidir melhor.</em></h1><p>Conhecimento prático para aquilo que realmente acontece na vida. Um pequeno passo de cada vez.</p><a class="button primary" href="${lessonURL(next)}">${Store.state.lastLesson ? "Continuar a aprender" : "Começar a aprender"} ${icon("arrow")}</a></div><div class="hero-note"><span class="note-icon">${icon("book")}</span><p>Não precisas de saber tudo.<br><strong>Só de querer começar.</strong></p><div class="note-divider"></div><span>${data.length} literacias · ${all.length} pequenas lições<br>Sem pressa. Sem conta. Ao teu ritmo.</span></div></section>
-      <section class="journey-strip" aria-label="O teu percurso"><div><span class="eyebrow">${Store.state.lastLesson ? "CONTINUAR APRENDIZAGEM" : "O TEU PRIMEIRO PASSO"}</span><h2>${e(next.title)}</h2><p>${e(next.area.title)} · Cerca de 3 minutos</p></div><a class="button secondary" href="${lessonURL(next)}">${Store.state.lastLesson ? "Continuar" : "Abrir lição"} ${icon("arrow")}</a></section>
-      <section aria-labelledby="explore-title" class="explore-section"><div class="section-heading"><div><p class="eyebrow">ESCOLHE O TEU CAMINHO</p><h2 id="explore-title">O que queres aprender hoje?</h2></div><span class="small">Curiosidade é um bom começo.</span></div><label class="search-box">${icon("search")}<span class="sr-only">Pesquisar literacias e lições</span><input id="search" type="search" placeholder="Experimenta: dinheiro, password, direitos…" autocomplete="off"><span class="search-caption">Pesquisar</span></label><p id="search-status" class="small" role="status" aria-live="polite"></p><div id="search-results"></div><div class="card-grid" id="area-grid">${data.map(card).join("")}</div></section>
-      <div class="bottom-grid"><section class="suggested"><span class="area-icon">${icon("target")}</span><p class="eyebrow">DO SABER AO FAZER</p><h2>Esta mensagem é phishing?</h2><p>Uma mensagem pede urgência. A tua resposta pode esperar. Pratica uma decisão.</p><a class="text-link" href="missoes.html?id=digital">Experimentar a missão ${icon("arrow")}</a></section><section class="summary-card"><p class="eyebrow">CADA PASSO CONTA</p><h2>O teu progresso</h2>${bar(all)}<p>${Progress.xp()} XP conquistados, ao teu ritmo.</p><a class="text-link" href="progresso.html">Ver o meu percurso ${icon("arrow")}</a></section></div>`;
+    main.innerHTML = ui.homeMarkup();
     document.querySelector("#search").addEventListener("input", (event) => {
       const query = normalize(event.target.value.trim());
-      const grid = document.querySelector("#area-grid");
-      const result = document.querySelector("#search-results");
-      const status = document.querySelector("#search-status");
+      const grid = document.querySelector("#area-grid"),
+        result = document.querySelector("#search-results"),
+        status = document.querySelector("#search-status");
       if (!query) {
         grid.hidden = false;
         result.innerHTML = "";
@@ -231,44 +260,61 @@
       }
       grid.hidden = true;
       const areas = data.filter((a) =>
-        normalize([a.title, a.description, a.shortTitle].join(" ")).includes(
-          query,
-        ),
+        normalize(
+          [
+            a.title,
+            a.description,
+            a.shortTitle,
+            ...a.categories.map((c) => c.title),
+          ].join(" "),
+        ).includes(query),
       );
       const matches = all.filter((l) =>
         normalize(
-          [l.title, l.summary, l.area.title, ...l.keywords, ...l.aliases].join(
-            " ",
-          ),
+          [
+            l.title,
+            l.summary,
+            l.area.title,
+            l.category.title,
+            ...l.keywords,
+            ...l.aliases,
+          ].join(" "),
         ).includes(query),
       );
       status.textContent = `${areas.length} literacias e ${matches.length} lições encontradas.`;
       result.innerHTML =
         (areas.length
-          ? `<div class="card-grid">${areas.map(card).join("")}</div>`
+          ? `<div class="search-areas">${areas.map((a) => `<a class="search-area" href="${areaURL(a)}" style="${ui.theme(a.id)}"><span class="area-icon">${icon(a.icon)}</span><span><strong>${e(a.title)}</strong><small>Explorar percurso</small></span>${icon("arrow")}</a>`).join("")}</div>`
           : "") +
         (matches.length
-          ? `<h3 class="results-heading">Lições</h3><div class="lesson-list">${matches.map(lessonRow).join("")}</div>`
+          ? `<h2 class="results-heading">Lições para explorar</h2><div class="lesson-list">${matches.map(lessonRow).join("")}</div>`
           : "") +
         (!areas.length && !matches.length
-          ? '<div class="empty"><h3>Ainda não encontrámos esse tema.</h3><p>Experimenta uma palavra mais simples, como dinheiro, fontes ou segurança.</p></div>'
+          ? '<div class="empty"><h2>Ainda não encontrámos esse tema.</h2><p>Experimenta dinheiro, fontes, consentimento ou segurança.</p></div>'
           : "");
     });
   }
   function areaPage() {
     const area = data.find((a) => a.id === id);
     if (!area) return missing();
-    const list = area.categories.flatMap((c) => c.lessons);
-    main.innerHTML = `<a class="back-link" href="index.html">← Todas as literacias</a>${title(area.title, area.description, "O TEU CAMINHO DE APRENDIZAGEM")}<section class="area-progress"><span class="area-icon tone-${e(area.id)}">${icon(area.icon)}</span><div>${bar(list)}<p class="small">${area.categories.length} categorias · ${list.length} lições · Cerca de 12 minutos</p></div></section>${notice(area)}${area.categories.map((c) => `<section class="category"><h2>${e(c.title)}</h2><div class="lesson-list">${c.lessons.map((l) => lessonRow(l, list.indexOf(l))).join("")}</div></section>`).join("")}<div class="bottom-grid"><section class="summary-card"><p class="eyebrow">PRATICA UMA DECISÃO</p><h2>${e(area.mission.title)}</h2><p>Uma missão curta para ligares o conhecimento ao dia a dia.</p><a class="button secondary" href="missoes.html?id=${e(area.id)}">Abrir missão · 25 XP</a></section><section class="suggested"><p class="eyebrow">DESAFIO FINAL — VIDA REAL</p><h2>Junta o que aprendeste.</h2><p>Conclui as ${list.length} lições para desbloquear o desafio desta literacia.</p>${Progress.count(list) === list.length ? `<a class="button primary" href="desafio.html?id=${e(area.id)}">${Store.state.challenges.includes(area.challenge.id) ? "Rever desafio" : "Aceitar desafio · 50 XP"}</a>` : `<span class="locked">${Progress.count(list)} de ${list.length} lições concluídas</span>`}</section></div>${sourceList(area)}`;
+    document.title = area.title + " — A Literacia";
+    document.querySelector('meta[name="description"]').content =
+      area.description;
+    document.querySelector('meta[property="og:title"]').content =
+      document.title;
+    document.querySelector('meta[property="og:description"]').content =
+      area.description;
+    main.innerHTML = ui.areaMarkup(area) + notice(area) + sourceList(area);
   }
   function lessonPage() {
     const lesson = all.find((l) => l.id === id);
     if (!lesson) return missing();
+    const wasCompleted = Store.state.completedLessons.includes(lesson.id);
     Store.last(lesson.id);
     const siblings = all.filter((l) => l.area.id === lesson.area.id);
     const index = siblings.findIndex((l) => l.id === id);
-    main.innerHTML = `<div class="lesson-toolbar"><a class="back-link" href="${areaURL(lesson.area)}">← ${e(lesson.area.title)}</a><button id="favorite" class="button ghost" aria-pressed="false"></button></div><article class="lesson-article">${title(lesson.title, lesson.summary, `${lesson.category.title} · LIÇÃO ${index + 1} DE ${siblings.length} · 3 MIN`)}<div id="lesson-progress">${bar(siblings)}</div><div class="lesson-steps" aria-label="Nesta lição"><a href="#quick">Em 10 segundos</a><a href="#explain">Explica-me</a><a href="#example">Mostra-me</a><a href="#experiment">Experimenta</a><a href="#quiz">Testa-me</a><a href="#apply">Aplica</a></div>
-      <section class="quick-box" id="quick"><p class="eyebrow">01 / EM 10 SEGUNDOS</p><h2>${e(lesson.quick)}</h2></section><section class="lesson-section" id="explain"><p class="eyebrow">02 / EXPLICA-ME</p><h2>Vamos por partes.</h2>${lesson.explain.map((p) => `<p>${e(p)}</p>`).join("")}</section><section class="example-box" id="example"><p class="eyebrow">03 / MOSTRA-ME</p><h2>${e(lesson.example.title)}</h2><p>${e(lesson.example.text)}</p></section><section class="lesson-section" id="experiment"><p class="eyebrow">04 / EXPERIMENTA</p><h2>Faz a ligação.</h2><div id="practice"></div></section><section class="quiz-card" id="quiz"><p class="eyebrow">05 / TESTA-ME · 10 XP</p><h2>Uma pergunta para recordar.</h2><div id="lesson-quiz"></div></section><section class="lesson-section" id="apply"><p class="eyebrow">06 / APLICA</p><h2>Leva isto contigo.</h2><p>${e(lesson.activity)}</p><p class="small">Esta atividade fica contigo. Não precisas de enviar respostas nem dados pessoais.</p></section>${notice(lesson.area)}${sourceList(lesson.area)}<div class="completion-box"><div><strong id="completion-title">Pronto para guardar este passo?</strong><p id="completion-hint">Responde corretamente ao quiz para concluir a lição.</p></div><button id="complete" class="button primary">Concluir lição · 20 XP</button></div><nav class="lesson-pagination" aria-label="Lições">${index > 0 ? `<a href="${lessonURL(siblings[index - 1])}">← ${e(siblings[index - 1].title)}</a>` : "<span></span>"}${index < siblings.length - 1 ? `<a href="${lessonURL(siblings[index + 1])}">${e(siblings[index + 1].title)} →</a>` : `<a href="${areaURL(lesson.area)}">Voltar à literacia →</a>`}</nav></article>`;
+    main.innerHTML = `<div class="lesson-toolbar"><a class="back-link" href="${areaURL(lesson.area)}">← ${e(lesson.area.title)}</a><button id="favorite" class="button ghost" aria-pressed="false"></button></div><article class="lesson-article">${title(lesson.title, lesson.summary, `${lesson.category.title} · LIÇÃO ${index + 1} DE ${siblings.length} · 3 MIN`)}<div id="lesson-progress">${bar(siblings)}</div><div id="lesson-mini-path">${ui.miniPath(lesson)}</div><div class="lesson-steps" aria-label="Nesta lição"><a href="#quick">Em 10 segundos</a><a href="#explain">Explica-me</a><a href="#example">Mostra-me</a><a href="#experiment">Experimenta</a><a href="#quiz">Testa-me</a><a href="#apply">Aplica</a><a href="#sources">Fontes</a></div>
+      <section class="quick-box" id="quick"><p class="eyebrow">01 / EM 10 SEGUNDOS</p><h2>${e(lesson.quick)}</h2></section><section class="lesson-section" id="explain"><p class="eyebrow">02 / EXPLICA-ME</p><h2>Vamos por partes.</h2>${lesson.explain.map((p) => `<p>${e(p)}</p>`).join("")}</section><section class="example-box" id="example"><p class="eyebrow">03 / MOSTRA-ME</p><h2>${e(lesson.example.title)}</h2><p>${e(lesson.example.text)}</p></section><section class="lesson-section" id="experiment"><p class="eyebrow">04 / EXPERIMENTA</p><h2>Faz a ligação.</h2><div id="practice"></div></section><section class="quiz-card" id="quiz"><p class="eyebrow">05 / TESTA-ME · 10 XP</p><h2>Uma pergunta para recordar.</h2><div id="lesson-quiz"></div></section><section class="lesson-section" id="apply"><p class="eyebrow">06 / APLICA</p><h2>Leva isto contigo.</h2><p>${e(lesson.activity)}</p><p class="small">Esta atividade fica contigo. Não precisas de enviar respostas nem dados pessoais.</p></section>${notice(lesson.area)}${sourceList(lesson.area, lesson)}<div class="completion-box"><div><strong id="completion-title">Pronto para guardar este passo?</strong><p id="completion-hint">Responde corretamente ao quiz para concluir a lição.</p></div><button id="complete" class="button primary">Concluir lição · 20 XP</button></div><nav class="lesson-pagination" aria-label="Lições">${index > 0 ? `<a href="${lessonURL(siblings[index - 1])}">← ${e(siblings[index - 1].title)}</a>` : "<span></span>"}${index < siblings.length - 1 ? `<a href="${lessonURL(siblings[index + 1])}">${e(siblings[index + 1].title)} →</a>` : `<a href="${areaURL(lesson.area)}">Voltar à literacia →</a>`}</nav></article>`;
     const favorite = document.querySelector("#favorite");
     function refreshFavorite() {
       const saved = Store.state.favorites.includes(id);
@@ -309,12 +355,22 @@
           ? "Já acertaste no quiz. Conclui para guardar o teu progresso."
           : "Responde corretamente ao quiz para concluir a lição.";
       document.querySelector("#lesson-progress").innerHTML = bar(siblings);
+      document.querySelector("#lesson-mini-path").innerHTML =
+        ui.miniPath(lesson);
+      document.querySelector("#completion-title").textContent = done
+        ? Store.state.masteredLessons.includes(id)
+          ? "Conhecimento revisto. Mais um passo consolidado."
+          : "Lição concluída. A próxima etapa espera por ti."
+        : "Pronto para guardar este passo?";
     }
     Quiz.mount(document.querySelector("#lesson-quiz"), lesson.quiz, {
       id,
       field: "quizzes",
       reward: 10,
-      onSuccess: refreshCompletion,
+      onSuccess: () => {
+        if (wasCompleted) Store.add("masteredLessons", id);
+        refreshCompletion();
+      },
     });
     document.querySelector("#complete").onclick = () => {
       if (!Store.state.quizzes.includes(id)) return;
@@ -327,17 +383,30 @@
     const selected = data.find((a) => a.id === id);
     main.innerHTML =
       title(
-        "Pequenas missões. Decisões reais.",
-        "Pratica sem pressão. Cada missão resolvida vale 25 XP, uma única vez.",
-        "DO SABER AO FAZER",
+        "Experimenta. Decide. Aprende.",
+        "Pequenas situações, grandes oportunidades de pôr o conhecimento em prática.",
+        "LABORATÓRIO DA VIDA REAL",
       ) +
-      `<div class="filter-links"><a class="chip ${!selected ? "selected" : ""}" href="missoes.html">Todas</a>${data.map((a) => `<a class="chip ${selected?.id === a.id ? "selected" : ""}" href="missoes.html?id=${e(a.id)}">${e(a.shortTitle)}</a>`).join("")}</div><div class="missions-grid">${(selected ? [selected] : data).map((a) => `<section class="quiz-card"><p class="eyebrow">${e(a.title)} · 25 XP</p><h2>${e(a.mission.title)}</h2><div id="${a.mission.id}"></div><a class="text-link" href="${areaURL(a)}">Rever esta literacia ${icon("arrow")}</a></section>`).join("")}</div>`;
+      `<div class="filter-links"><a class="chip ${!selected ? "selected" : ""}" href="missoes.html">Todas as missões</a>${data.map((a) => `<a class="chip ${selected?.id === a.id ? "selected" : ""}" href="missoes.html?id=${a.id}" style="${ui.theme(a.id)}">${icon(a.icon)}${e(a.shortTitle)}</a>`).join("")}</div>${selected ? '<section id="interactive-experience"></section>' : `<section class="lab-introduction"><span>${icon("target")}</span><div><h2>Aprende fazendo.</h2><p>Distribui um orçamento, compõe um prato, explora uma mensagem ou escolhe uma rota. Abre uma literacia para experimentar o laboratório.</p></div></section>`}<div class="missions-grid">${(selected ? [selected] : data).flatMap((a) => (a.missions || [a.mission]).map((m) => `<section class="quiz-card mission-quiz" style="${ui.theme(a.id)}"><div class="mission-top"><span class="area-icon">${icon(a.icon)}</span><span class="mission-xp">${Store.state.missions.includes(m.id) ? "✓ Concluída" : "25 XP"}</span></div><p class="eyebrow">${e(a.title)}</p><h2>${e(m.title)}</h2>${m.scene ? `<div class="civic-scene" aria-hidden="true"><span>${{ door: "↔", clock: "20:00 → 20:40", seat: "♡", help: "“Não, obrigado.”" }[m.scene]}</span></div>` : ""}<div id="${m.id}"></div><a class="text-link" href="${selected ? areaURL(a) : "missoes.html?id=" + a.id}">${selected ? "Rever o percurso" : "Abrir laboratório"} ${icon("arrow")}</a></section>`)).join("")}</div>`;
+    if (selected)
+      Experiences.mount(
+        document.querySelector("#interactive-experience"),
+        selected,
+      );
     (selected ? [selected] : data).forEach((a) =>
-      Quiz.mount(document.querySelector("#" + a.mission.id), a.mission, {
-        id: a.mission.id,
-        field: "missions",
-        reward: 25,
-      }),
+      (a.missions || [a.mission]).forEach((m) =>
+        Quiz.mount(document.getElementById(m.id), m, {
+          id: m.id,
+          field: "missions",
+          reward: 25,
+          onSuccess: () => {
+            document
+              .getElementById(m.id)
+              .closest(".mission-quiz")
+              .querySelector(".mission-xp").textContent = "✓ Concluída";
+          },
+        }),
+      ),
     );
   }
   function challenge() {
@@ -345,7 +414,10 @@
     if (!area) return missing();
     const list = area.categories.flatMap((c) => c.lessons);
     main.innerHTML = `<a class="back-link" href="${areaURL(area)}">← ${e(area.title)}</a>${title("Desafio final — vida real", area.description, "JUNTA O QUE APRENDESTE")}`;
-    if (Progress.count(list) !== list.length) {
+    if (
+      Progress.count(list) !== list.length &&
+      !Store.state.challenges.includes(area.challenge.id)
+    ) {
       main.innerHTML += `<div class="empty"><h2>Mais alguns passos antes do desafio.</h2><p>Conclui as ${list.length} lições desta literacia para desbloquear este cenário.</p>${bar(list)}<a class="button primary" href="${areaURL(area)}">Continuar a aprender</a></div>`;
       return;
     }
